@@ -200,18 +200,20 @@
 
 <body class="bg-white text-navy-900 overflow-x-hidden">
 
+  <!-- ══════════════════════ SELECTOR DE IDIOMA FIJO ══════════════════════ -->
+
   <!-- ══════════════════════ NAVBAR ══════════════════════ -->
   <nav class="nav-glass fixed top-0 left-0 right-0 z-50 px-8 lg:px-16 py-4">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <span class="font-playfair text-white text-lg font-bold tracking-tight">
-        Kathy's <span class="text-blue-400">House Cleaning</span>
+        Kathy’s <span class="text-blue-400">House Cleaning</span>
       </span>
       <ul class="hidden md:flex gap-8 list-none m-0 p-0">
-        <li><a href="#inicio"    class="text-gray-300 hover:text-blue-400 text-sm font-medium tracking-wide transition-colors">Inicio</a></li>
-        <li><a href="#servicios" class="text-gray-300 hover:text-blue-400 text-sm font-medium tracking-wide transition-colors">Servicios</a></li>
-        <li><a href="#contacto"  class="text-gray-300 hover:text-blue-400 text-sm font-medium tracking-wide transition-colors">Contacto</a></li>
+        <li><a href="#inicio"    data-i18n="nav_home"    class="text-gray-300 hover:text-blue-400 text-sm font-medium tracking-wide transition-colors">Inicio</a></li>
+        <li><a href="#servicios" data-i18n="nav_services" class="text-gray-300 hover:text-blue-400 text-sm font-medium tracking-wide transition-colors">Servicios</a></li>
+        <li><a href="#contacto"  data-i18n="nav_contact"  class="text-gray-300 hover:text-blue-400 text-sm font-medium tracking-wide transition-colors">Contacto</a></li>
       </ul>
-      <a href="#contacto" class="btn-primary hidden md:inline-block text-sm px-5 py-2">Cotizar</a>
+      <a href="#contacto" class="btn-primary hidden md:inline-block text-sm px-5 py-2" data-i18n="quote">Cotizar</a>
     </div>
   </nav>
 
@@ -238,40 +240,40 @@
             Kathy's <span class="text-blue-400">House</span> Cleaning
           </h1>
           <p class="text-blue-300 text-xs md:text-sm font-light tracking-[.3em] uppercase mt-2">
-            Limpieza Profesional · Confiable · Puntual
+            <span data-i18n="hero_sub">Limpieza Profesional · Confiable · Puntual</span>
           </p>
         </div>
       </div>
 
       <p class="animate-fadeUp-d1 text-gray-400 text-base md:text-lg max-w-md leading-relaxed">
-        Tu hogar merece el mejor cuidado. Dejamos cada rincón impecable con dedicación y productos de primera calidad.
+        <span data-i18n="hero_desc">Tu hogar merece el mejor cuidado. Dejamos cada rincón impecable con dedicación y productos de primera calidad.</span>
       </p>
 
       <div class="animate-fadeUp-d2 flex gap-4 flex-wrap justify-center">
-        <a href="#contacto"  class="btn-primary text-sm px-8 py-3">Solicitar Servicio</a>
-        <a href="#servicios" class="btn-outline  text-sm px-8 py-3">Ver Servicios</a>
+        <a href="#contacto"  class="btn-primary text-sm px-8 py-3" data-i18n="hero_cta1">Solicitar Servicio</a>
+        <a href="#servicios" class="btn-outline  text-sm px-8 py-3" data-i18n="hero_cta2">Ver Servicios</a>
       </div>
 
       <div class="animate-fadeUp-d3 flex items-center gap-8">
         <div class="text-center">
           <span class="block font-playfair text-blue-400 text-3xl font-bold">+500</span>
-          <span class="text-gray-500 text-xs tracking-widest uppercase">Hogares</span>
+          <span class="text-gray-500 text-xs tracking-widest uppercase" data-i18n="homes">Hogares</span>
         </div>
         <div class="w-px h-10 bg-blue-400/20"></div>
         <div class="text-center">
           <span class="block font-playfair text-blue-400 text-3xl font-bold">10+</span>
-          <span class="text-gray-500 text-xs tracking-widest uppercase">Años</span>
+          <span class="text-gray-500 text-xs tracking-widest uppercase" data-i18n="years">Años</span>
         </div>
         <div class="w-px h-10 bg-blue-400/20"></div>
         <div class="text-center">
           <span class="block font-playfair text-blue-400 text-3xl font-bold">100%</span>
-          <span class="text-gray-500 text-xs tracking-widest uppercase">Satisfacción</span>
+          <span class="text-gray-500 text-xs tracking-widest uppercase" data-i18n="satisfaction">Satisfacción</span>
         </div>
       </div>
     </div>
 
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-600 text-xs tracking-widest uppercase animate-bounce select-none">
-      ↓ scroll
+      <span data-i18n="scroll">↓ scroll</span>
     </div>
   </section>
 
@@ -280,8 +282,8 @@
     <div class="max-w-6xl mx-auto">
 
       <div class="text-center mb-16 reveal">
-        <p class="text-blue-600 text-xs font-semibold tracking-widest uppercase mb-3">Lo que ofrecemos</p>
-        <h2 class="font-playfair font-bold text-navy-900 text-4xl md:text-5xl mb-4">Nuestros Servicios</h2>
+        <p class="text-blue-600 text-xs font-semibold tracking-widest uppercase mb-3" data-i18n="offer">Lo que ofrecemos</p>
+        <h2 class="font-playfair font-bold text-navy-900 text-4xl md:text-5xl mb-4" data-i18n="our_services">Nuestros Servicios</h2>
         <div class="accent-bar"></div>
       </div>
 
@@ -289,62 +291,62 @@
 
         <div class="service-card reveal reveal-d1">
           <div class="service-icon">🏠</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2">Limpieza Residencial</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Limpieza completa del hogar: cocina, baños, habitaciones y más. Disponible semanal, quincenal o mensual.</p>
+          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="residential">Limpieza Residencial</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="residential_desc">Limpieza completa del hogar: cocina, baños, habitaciones y más. Disponible semanal, quincenal o mensual.</p>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Semanal</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Quincenal</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Mensual</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="weekly">Semanal</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="biweekly">Quincenal</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="monthly">Mensual</span>
           </div>
         </div>
 
         <div class="service-card reveal reveal-d2">
           <div class="service-icon">🏢</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2">Limpieza Comercial</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Oficinas, locales y espacios de trabajo limpios y presentables para dar la mejor imagen a tus clientes.</p>
+          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="commercial">Limpieza Comercial</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="commercial_desc">Oficinas, locales y espacios de trabajo limpios y presentables para dar la mejor imagen a tus clientes.</p>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Oficinas</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Locales</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="offices">Oficinas</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="stores">Locales</span>
           </div>
         </div>
 
         <div class="service-card reveal reveal-d3">
           <div class="service-icon">✨</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2">Limpieza Profunda</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Limpieza exhaustiva que incluye zonas de difícil acceso, electrodomésticos, armarios y desinfección total.</p>
+          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="deep">Limpieza Profunda</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="deep_desc">Limpieza exhaustiva que incluye zonas de difícil acceso, electrodomésticos, armarios y desinfección total.</p>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Deep Clean</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Desinfección</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="deep_clean">Deep Clean</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="disinfection">Desinfección</span>
           </div>
         </div>
 
         <div class="service-card reveal reveal-d1">
           <div class="service-icon">📦</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2">Mudanzas</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Limpieza de tu nuevo hogar antes de entrar o del anterior antes de entregarlo. ¡Listo para el siguiente capítulo!</p>
+          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="moving">Mudanzas</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="moving_desc">Limpieza de tu nuevo hogar antes de entrar o del anterior antes de entregarlo. ¡Listo para el siguiente capítulo!</p>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Move-in</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Move-out</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="movein">Move-in</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="moveout">Move-out</span>
           </div>
         </div>
 
         <div class="service-card reveal reveal-d2">
           <div class="service-icon">🪟</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2">Ventanas y Cristales</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Limpieza interior y exterior de ventanas, puertas de vidrio y espejos para una visión perfectamente clara.</p>
+          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="windows">Ventanas y Cristales</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="windows_desc">Limpieza interior y exterior de ventanas, puertas de vidrio y espejos para una visión perfectamente clara.</p>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Interior</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Exterior</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="interior">Interior</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="exterior">Exterior</span>
           </div>
         </div>
 
         <div class="service-card reveal reveal-d3">
           <div class="service-icon">🛋️</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2">Alfombras y Tapicería</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Lavado y tratamiento especializado de alfombras, sofás y tapicería para eliminar manchas, gérmenes y malos olores.</p>
+          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="carpets">Alfombras y Tapicería</h3>
+          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="carpets_desc">Lavado y tratamiento especializado de alfombras, sofás y tapicería para eliminar manchas, gérmenes y malos olores.</p>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Alfombras</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100">Sofás</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="carpets2">Alfombras</span>
+            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="sofas">Sofás</span>
           </div>
         </div>
 
@@ -360,39 +362,39 @@
     <div class="relative z-10 max-w-4xl mx-auto">
 
       <div class="text-center mb-14 reveal">
-        <p class="text-blue-400 text-xs font-semibold tracking-widest uppercase mb-3">Estamos para ti</p>
-        <h2 class="font-playfair text-white font-bold text-4xl md:text-5xl mb-4">Contáctanos</h2>
+        <p class="text-blue-400 text-xs font-semibold tracking-widest uppercase mb-3" data-i18n="here">Estamos para ti</p>
+        <h2 class="font-playfair text-white font-bold text-4xl md:text-5xl mb-4" data-i18n="contact_us">Contáctanos</h2>
         <div class="accent-bar"></div>
         <p class="text-gray-400 mt-5 text-base max-w-md mx-auto leading-relaxed">
-          ¿Listo para tener tu hogar impecable? Escríbenos o llámanos — respondemos rápido.
+          <span data-i18n="contact_desc">¿Listo para tener tu hogar impecable? Escríbenos o llámanos — respondemos rápido.</span>
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
 
-        <a href="mailto:kathysclean@gmail.com" class="contact-link reveal reveal-d1">
+        <a href="mailto:cathymybusiness01@gmail.com" class="contact-link reveal reveal-d1">
           <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
           <div>
-            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5">Correo electrónico</p>
-            <p class="text-white font-semibold text-sm">kathysclean@gmail.com</p>
+            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5" data-i18n="email">Correo electrónico</p>
+            <p class="text-white font-semibold text-sm">cathymybusiness01@gmail.com</p>
           </div>
           <i class="fa-solid fa-arrow-right text-blue-400/40 ml-auto text-xs"></i>
         </a>
 
-        <a href="https://wa.me/15551234567" target="_blank" class="contact-link reveal reveal-d2">
+        <a href="https://wa.me/12068525970" target="_blank" class="contact-link reveal reveal-d2">
           <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
           <div>
-            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5">WhatsApp</p>
-            <p class="text-white font-semibold text-sm">+1 (555) 123-4567</p>
+            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5" data-i18n="whatsapp">WhatsApp</p>
+            <p class="text-white font-semibold text-sm">(206) 852-5970</p>
           </div>
           <i class="fa-solid fa-arrow-right text-blue-400/40 ml-auto text-xs"></i>
         </a>
 
-        <a href="tel:+15551234567" class="contact-link reveal reveal-d3">
+        <a href="tel:+12068525970" class="contact-link reveal reveal-d3">
           <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
           <div>
-            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5">Llamadas</p>
-            <p class="text-white font-semibold text-sm">+1 (555) 123-4567</p>
+            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5" data-i18n="calls">Llamadas</p>
+            <p class="text-white font-semibold text-sm">(206) 852-5970</p>
           </div>
           <i class="fa-solid fa-arrow-right text-blue-400/40 ml-auto text-xs"></i>
         </a>
@@ -400,8 +402,8 @@
         <div class="contact-link reveal reveal-d4 cursor-default">
           <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
           <div>
-            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5">Dirección</p>
-            <p class="text-white font-semibold text-sm">123 Maple Street, Miami, FL 33101</p>
+            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5" data-i18n="address">Dirección</p>
+            <p class="text-white font-semibold text-sm">18534 139th Pl Renton WA 98058</p>
           </div>
         </div>
 
@@ -411,7 +413,7 @@
         <div class="flex items-center gap-3 px-6 py-3 rounded-full"
              style="background:rgba(96,165,250,.06); border:1px solid rgba(96,165,250,.18);">
           <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-          <span class="text-gray-300 text-sm">Disponibles Lun – Sáb &nbsp;·&nbsp; 7:00 AM – 7:00 PM</span>
+          <span class="text-gray-300 text-sm" data-i18n="hours">Disponibles Lun – Sáb &nbsp;·&nbsp; 7:00 AM – 7:00 PM</span>
         </div>
       </div>
 
@@ -429,16 +431,16 @@
             <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl"
                  style="background:linear-gradient(135deg,#1e5fcc,#60a5fa);">🧹</div>
             <span class="font-playfair text-white text-lg font-bold">
-              Kathy's <span class="text-blue-400">House Cleaning</span>
+              Kathy’s <span class="text-blue-400">House Cleaning</span>
             </span>
           </div>
           <p class="text-gray-500 text-sm max-w-xs leading-relaxed">
-            Más de 10 años transformando hogares con profesionalismo y dedicación.
+            <span data-i18n="footer_desc">12 years of experience. House cleaning, move out, deep cleaning. Owner: Catalina Galicia.</span>
           </p>
         </div>
 
         <div class="text-center">
-          <p class="text-gray-500 text-xs uppercase tracking-widest mb-4">Síguenos</p>
+          <p class="text-gray-500 text-xs uppercase tracking-widest mb-4" data-i18n="follow">Síguenos</p>
           <div class="flex items-center gap-3 justify-center flex-wrap">
             <a href="https://facebook.com/kathysclean"  target="_blank" class="social-btn" title="Facebook">  <i class="fa-brands fa-facebook-f text-sm"></i></a>
             <a href="https://instagram.com/kathysclean" target="_blank" class="social-btn" title="Instagram"> <i class="fa-brands fa-instagram   text-sm"></i></a>
@@ -455,11 +457,11 @@
       <div class="gradient-line mb-6"></div>
 
       <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-600">
-        <span>© 2024 Kathy's House Cleaning. Todos los derechos reservados.</span>
+        <span data-i18n="copyright">© 2024 Kathy's House Cleaning. Todos los derechos reservados.</span>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-blue-400 transition-colors">Privacidad</a>
-          <a href="#" class="hover:text-blue-400 transition-colors">Términos</a>
-          <a href="#contacto" class="hover:text-blue-400 transition-colors">Contacto</a>
+          <a href="#" class="hover:text-blue-400 transition-colors" data-i18n="privacy">Privacidad</a>
+          <a href="#" class="hover:text-blue-400 transition-colors" data-i18n="terms">Términos</a>
+          <a href="#contacto" class="hover:text-blue-400 transition-colors" data-i18n="footer_contact">Contacto</a>
         </div>
       </div>
 
@@ -476,6 +478,146 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Traducciones
+    const translations = {
+      es: {
+        nav_home: "Inicio",
+        nav_services: "Servicios",
+        nav_contact: "Contacto",
+        quote: "Cotizar",
+        hero_sub: "Limpieza Profesional · Confiable · Puntual",
+        hero_desc: "Tu hogar merece el mejor cuidado. Dejamos cada rincón impecable con dedicación y productos de primera calidad.",
+        hero_cta1: "Solicitar Servicio",
+        hero_cta2: "Ver Servicios",
+        homes: "Hogares",
+        years: "Años",
+        satisfaction: "Satisfacción",
+        scroll: "↓ scroll",
+        offer: "Lo que ofrecemos",
+        our_services: "Nuestros Servicios",
+        residential: "Limpieza Residencial",
+        residential_desc: "Limpieza completa del hogar: cocina, baños, habitaciones y más. Disponible semanal, quincenal o mensual.",
+        weekly: "Semanal",
+        biweekly: "Quincenal",
+        monthly: "Mensual",
+        commercial: "Limpieza Comercial",
+        commercial_desc: "Oficinas, locales y espacios de trabajo limpios y presentables para dar la mejor imagen a tus clientes.",
+        offices: "Oficinas",
+        stores: "Locales",
+        deep: "Limpieza Profunda",
+        deep_desc: "Limpieza exhaustiva que incluye zonas de difícil acceso, electrodomésticos, armarios y desinfección total.",
+        deep_clean: "Deep Clean",
+        disinfection: "Desinfección",
+        moving: "Mudanzas",
+        moving_desc: "Limpieza de tu nuevo hogar antes de entrar o del anterior antes de entregarlo. ¡Listo para el siguiente capítulo!",
+        movein: "Move-in",
+        moveout: "Move-out",
+        windows: "Ventanas y Cristales",
+        windows_desc: "Limpieza interior y exterior de ventanas, puertas de vidrio y espejos para una visión perfectamente clara.",
+        interior: "Interior",
+        exterior: "Exterior",
+        carpets: "Alfombras y Tapicería",
+        carpets_desc: "Lavado y tratamiento especializado de alfombras, sofás y tapicería para eliminar manchas, gérmenes y malos olores.",
+        carpets2: "Alfombras",
+        sofas: "Sofás",
+        here: "Estamos para ti",
+        contact_us: "Contáctanos",
+        contact_desc: "¿Listo para tener tu hogar impecable? Escríbenos o llámanos — respondemos rápido.",
+        email: "Correo electrónico",
+        whatsapp: "WhatsApp",
+        calls: "Llamadas",
+        address: "Dirección",
+        hours: "Disponibles Lun – Sáb · 7:00 AM – 7:00 PM",
+        footer_desc: "Más de 10 años transformando hogares con profesionalismo y dedicación.",
+        follow: "Síguenos",
+        copyright: "© 2024 Kathy's House Cleaning. Todos los derechos reservados.",
+        privacy: "Privacidad",
+        terms: "Términos",
+        footer_contact: "Contacto"
+      },
+      en: {
+        nav_home: "Home",
+        nav_services: "Services",
+        nav_contact: "Contact",
+        quote: "Get a Quote",
+        hero_sub: "Professional · Reliable · Punctual Cleaning",
+        hero_desc: "Your home deserves the best care. We leave every corner spotless with dedication and top-quality products.",
+        hero_cta1: "Request Service",
+        hero_cta2: "See Services",
+        homes: "Homes",
+        years: "Years",
+        satisfaction: "Satisfaction",
+        scroll: "↓ scroll",
+        offer: "What We Offer",
+        our_services: "Our Services",
+        residential: "Residential Cleaning",
+        residential_desc: "Complete home cleaning: kitchen, bathrooms, bedrooms, and more. Available weekly, biweekly, or monthly.",
+        weekly: "Weekly",
+        biweekly: "Biweekly",
+        monthly: "Monthly",
+        commercial: "Commercial Cleaning",
+        commercial_desc: "Offices, stores, and workspaces clean and presentable to give your clients the best impression.",
+        offices: "Offices",
+        stores: "Stores",
+        deep: "Deep Cleaning",
+        deep_desc: "Thorough cleaning including hard-to-reach areas, appliances, cabinets, and total disinfection.",
+        deep_clean: "Deep Clean",
+        disinfection: "Disinfection",
+        moving: "Moving",
+        moving_desc: "Cleaning your new home before moving in or your old one before handing it over. Ready for the next chapter!",
+        movein: "Move-in",
+        moveout: "Move-out",
+        windows: "Windows & Glass",
+        windows_desc: "Interior and exterior cleaning of windows, glass doors, and mirrors for a perfectly clear view.",
+        interior: "Interior",
+        exterior: "Exterior",
+        carpets: "Carpets & Upholstery",
+        carpets_desc: "Specialized washing and treatment of carpets, sofas, and upholstery to remove stains, germs, and odors.",
+        carpets2: "Carpets",
+        sofas: "Sofas",
+        here: "We're here for you",
+        contact_us: "Contact Us",
+        contact_desc: "Ready for a spotless home? Write or call us — we respond quickly.",
+        email: "Email",
+        whatsapp: "WhatsApp",
+        calls: "Calls",
+        address: "Address",
+        hours: "Available Mon – Sat · 7:00 AM – 7:00 PM",
+        footer_desc: "Over 10 years transforming homes with professionalism and dedication.",
+        follow: "Follow Us",
+        copyright: "© 2024 Kathy's House Cleaning. All rights reserved.",
+        privacy: "Privacy",
+        terms: "Terms",
+        footer_contact: "Contact"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    const langSelect = document.getElementById('lang-select');
+    langSelect.addEventListener('change', e => {
+      setLanguage(e.target.value);
+      localStorage.setItem('lang', e.target.value);
+    });
+
+    // Detectar idioma automáticamente la primera vez
+    let savedLang = localStorage.getItem('lang');
+    if (!savedLang) {
+      const browserLang = navigator.language.slice(0,2);
+      savedLang = ['es','en'].includes(browserLang) ? browserLang : 'es';
+      localStorage.setItem('lang', savedLang);
+    }
+    langSelect.value = savedLang;
+    setLanguage(savedLang);
   </script>
 
 </body>
