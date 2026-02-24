@@ -261,7 +261,7 @@
         </div>
         <div class="w-px h-10 bg-blue-400/20"></div>
         <div class="text-center">
-          <span class="block font-playfair text-blue-400 text-3xl font-bold">10+</span>
+          <span class="block font-playfair text-blue-400 text-3xl font-bold">12</span>
           <span class="text-gray-500 text-xs tracking-widest uppercase" data-i18n="years">Años</span>
         </div>
         <div class="w-px h-10 bg-blue-400/20"></div>
@@ -403,7 +403,7 @@
           <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
           <div>
             <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5" data-i18n="address">Dirección</p>
-            <p class="text-white font-semibold text-sm">18534 139th Pl Renton WA 98058</p>
+            <p class="text-white font-semibold text-sm">18534 139th Pl Renton WA 98058, Seattle, Washington</p>
           </div>
         </div>
 
@@ -413,7 +413,7 @@
         <div class="flex items-center gap-3 px-6 py-3 rounded-full"
              style="background:rgba(96,165,250,.06); border:1px solid rgba(96,165,250,.18);">
           <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-          <span class="text-gray-300 text-sm" data-i18n="hours">Disponibles Lun – Sáb &nbsp;·&nbsp; 7:00 AM – 7:00 PM</span>
+          <span class="text-gray-300 text-sm" data-i18n="hours">Disponibles Lun – Sáb &nbsp;·&nbsp; 7:00 AM – 7:00 PM<br>Solo trabajamos en un rango de 45 minutos cerca de Seattle</span>
         </div>
       </div>
 
@@ -444,11 +444,8 @@
           <div class="flex items-center gap-3 justify-center flex-wrap">
             <a href="https://facebook.com/kathysclean"  target="_blank" class="social-btn" title="Facebook">  <i class="fa-brands fa-facebook-f text-sm"></i></a>
             <a href="https://instagram.com/kathysclean" target="_blank" class="social-btn" title="Instagram"> <i class="fa-brands fa-instagram   text-sm"></i></a>
-            <a href="https://tiktok.com/@kathysclean"   target="_blank" class="social-btn" title="TikTok">    <i class="fa-brands fa-tiktok      text-sm"></i></a>
-            <a href="https://twitter.com/kathysclean"   target="_blank" class="social-btn" title="Twitter/X"> <i class="fa-brands fa-x-twitter   text-sm"></i></a>
-            <a href="https://youtube.com/@kathysclean"  target="_blank" class="social-btn" title="YouTube">   <i class="fa-brands fa-youtube     text-sm"></i></a>
-            <a href="https://pinterest.com/kathysclean" target="_blank" class="social-btn" title="Pinterest"> <i class="fa-brands fa-pinterest-p text-sm"></i></a>
-            <a href="https://wa.me/15551234567"         target="_blank" class="social-btn" title="WhatsApp">  <i class="fa-brands fa-whatsapp    text-sm"></i></a>
+            
+            <a href="https://wa.me/12068525970"         target="_blank" class="social-btn" title="WhatsApp">  <i class="fa-brands fa-whatsapp    text-sm"></i></a>
           </div>
         </div>
 
@@ -457,10 +454,9 @@
       <div class="gradient-line mb-6"></div>
 
       <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-600">
-        <span data-i18n="copyright">© 2024 Kathy's House Cleaning. Todos los derechos reservados.</span>
+        <span data-i18n="copyright">© 2026 Kathy's House Cleaning. Todos los derechos reservados.<br>Desarrollado por <a href="https://www.linkedin.com/in/christopher-zambrano-943825318/?locale=en_US" target="_blank" style="color:#60a5fa;text-decoration:none;">Christopher Zambrano</a></span>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-blue-400 transition-colors" data-i18n="privacy">Privacidad</a>
-          <a href="#" class="hover:text-blue-400 transition-colors" data-i18n="terms">Términos</a>
+          
           <a href="#contacto" class="hover:text-blue-400 transition-colors" data-i18n="footer_contact">Contacto</a>
         </div>
       </div>
@@ -479,145 +475,7 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Traducciones
-    const translations = {
-      es: {
-        nav_home: "Inicio",
-        nav_services: "Servicios",
-        nav_contact: "Contacto",
-        quote: "Cotizar",
-        hero_sub: "Limpieza Profesional · Confiable · Puntual",
-        hero_desc: "Tu hogar merece el mejor cuidado. Dejamos cada rincón impecable con dedicación y productos de primera calidad.",
-        hero_cta1: "Solicitar Servicio",
-        hero_cta2: "Ver Servicios",
-        homes: "Hogares",
-        years: "Años",
-        satisfaction: "Satisfacción",
-        scroll: "↓ scroll",
-        offer: "Lo que ofrecemos",
-        our_services: "Nuestros Servicios",
-        residential: "Limpieza Residencial",
-        residential_desc: "Limpieza completa del hogar: cocina, baños, habitaciones y más. Disponible semanal, quincenal o mensual.",
-        weekly: "Semanal",
-        biweekly: "Quincenal",
-        monthly: "Mensual",
-        commercial: "Limpieza Comercial",
-        commercial_desc: "Oficinas, locales y espacios de trabajo limpios y presentables para dar la mejor imagen a tus clientes.",
-        offices: "Oficinas",
-        stores: "Locales",
-        deep: "Limpieza Profunda",
-        deep_desc: "Limpieza exhaustiva que incluye zonas de difícil acceso, electrodomésticos, armarios y desinfección total.",
-        deep_clean: "Deep Clean",
-        disinfection: "Desinfección",
-        moving: "Mudanzas",
-        moving_desc: "Limpieza de tu nuevo hogar antes de entrar o del anterior antes de entregarlo. ¡Listo para el siguiente capítulo!",
-        movein: "Move-in",
-        moveout: "Move-out",
-        windows: "Ventanas y Cristales",
-        windows_desc: "Limpieza interior y exterior de ventanas, puertas de vidrio y espejos para una visión perfectamente clara.",
-        interior: "Interior",
-        exterior: "Exterior",
-        carpets: "Alfombras y Tapicería",
-        carpets_desc: "Lavado y tratamiento especializado de alfombras, sofás y tapicería para eliminar manchas, gérmenes y malos olores.",
-        carpets2: "Alfombras",
-        sofas: "Sofás",
-        here: "Estamos para ti",
-        contact_us: "Contáctanos",
-        contact_desc: "¿Listo para tener tu hogar impecable? Escríbenos o llámanos — respondemos rápido.",
-        email: "Correo electrónico",
-        whatsapp: "WhatsApp",
-        calls: "Llamadas",
-        address: "Dirección",
-        hours: "Disponibles Lun – Sáb · 7:00 AM – 7:00 PM",
-        footer_desc: "Más de 10 años transformando hogares con profesionalismo y dedicación.",
-        follow: "Síguenos",
-        copyright: "© 2024 Kathy's House Cleaning. Todos los derechos reservados.",
-        privacy: "Privacidad",
-        terms: "Términos",
-        footer_contact: "Contacto"
-      },
-      en: {
-        nav_home: "Home",
-        nav_services: "Services",
-        nav_contact: "Contact",
-        quote: "Get a Quote",
-        hero_sub: "Professional · Reliable · Punctual Cleaning",
-        hero_desc: "Your home deserves the best care. We leave every corner spotless with dedication and top-quality products.",
-        hero_cta1: "Request Service",
-        hero_cta2: "See Services",
-        homes: "Homes",
-        years: "Years",
-        satisfaction: "Satisfaction",
-        scroll: "↓ scroll",
-        offer: "What We Offer",
-        our_services: "Our Services",
-        residential: "Residential Cleaning",
-        residential_desc: "Complete home cleaning: kitchen, bathrooms, bedrooms, and more. Available weekly, biweekly, or monthly.",
-        weekly: "Weekly",
-        biweekly: "Biweekly",
-        monthly: "Monthly",
-        commercial: "Commercial Cleaning",
-        commercial_desc: "Offices, stores, and workspaces clean and presentable to give your clients the best impression.",
-        offices: "Offices",
-        stores: "Stores",
-        deep: "Deep Cleaning",
-        deep_desc: "Thorough cleaning including hard-to-reach areas, appliances, cabinets, and total disinfection.",
-        deep_clean: "Deep Clean",
-        disinfection: "Disinfection",
-        moving: "Moving",
-        moving_desc: "Cleaning your new home before moving in or your old one before handing it over. Ready for the next chapter!",
-        movein: "Move-in",
-        moveout: "Move-out",
-        windows: "Windows & Glass",
-        windows_desc: "Interior and exterior cleaning of windows, glass doors, and mirrors for a perfectly clear view.",
-        interior: "Interior",
-        exterior: "Exterior",
-        carpets: "Carpets & Upholstery",
-        carpets_desc: "Specialized washing and treatment of carpets, sofas, and upholstery to remove stains, germs, and odors.",
-        carpets2: "Carpets",
-        sofas: "Sofas",
-        here: "We're here for you",
-        contact_us: "Contact Us",
-        contact_desc: "Ready for a spotless home? Write or call us — we respond quickly.",
-        email: "Email",
-        whatsapp: "WhatsApp",
-        calls: "Calls",
-        address: "Address",
-        hours: "Available Mon – Sat · 7:00 AM – 7:00 PM",
-        footer_desc: "Over 10 years transforming homes with professionalism and dedication.",
-        follow: "Follow Us",
-        copyright: "© 2024 Kathy's House Cleaning. All rights reserved.",
-        privacy: "Privacy",
-        terms: "Terms",
-        footer_contact: "Contact"
-      }
-    };
-
-    function setLanguage(lang) {
-      document.documentElement.lang = lang;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-    }
-
-    const langSelect = document.getElementById('lang-select');
-    langSelect.addEventListener('change', e => {
-      setLanguage(e.target.value);
-      localStorage.setItem('lang', e.target.value);
-    });
-
-    // Detectar idioma automáticamente la primera vez
-    let savedLang = localStorage.getItem('lang');
-    if (!savedLang) {
-      const browserLang = navigator.language.slice(0,2);
-      savedLang = ['es','en'].includes(browserLang) ? browserLang : 'es';
-      localStorage.setItem('lang', savedLang);
-    }
-    langSelect.value = savedLang;
-    setLanguage(savedLang);
+    
   </script>
 
 </body>
