@@ -1,557 +1,216 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-          <!-- Logo principal para SEO y navegadores -->
-          <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-          <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.ico" />
-          <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-          <link rel="manifest" href="/images/site.webmanifest" />
-          <meta property="og:image" content="/images/logo.png" />
-          <meta name="twitter:image" content="/images/logo.png" />
-          <meta name="msapplication-TileImage" content="/images/web-app-manifest-192x192.png" />
-        <!-- Schema.org Structured Data -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Kathy's House Cleaning",
-          "image": "https://kathyscleaning.com/og-image.jpg",
-          "@id": "https://kathyscleaning.com",
-          "url": "https://kathyscleaning.com",
-          "telephone": "+1-206-852-5970",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "18534 139th Pl Renton WA 98058",
-            "addressLocality": "Seattle",
-            "addressRegion": "WA",
-            "postalCode": "98058",
-            "addressCountry": "US"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 47.6062,
-            "longitude": -122.3321
-          },
-          "openingHours": [
-            "Mo-Sa 07:00-19:00"
-          ],
-          "priceRange": "$",
-          "description": "Servicio profesional de limpieza de casas, oficinas y mudanzas en Seattle y alrededores. Puntualidad, confianza y calidad.",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-206-852-5970",
-            "contactType": "customer service",
-            "areaServed": "Seattle, Washington"
-          }
-        }
-        </script>
-      <!-- Local SEO & Accessibility -->
-      <meta name="geo.region" content="US-WA" />
-      <meta name="geo.placename" content="Seattle" />
-      <meta name="geo.position" content="47.6062;-122.3321" />
-      <meta name="ICBM" content="47.6062, -122.3321" />
-      <meta name="language" content="Spanish" />
-      <meta name="theme-color" content="#1e5fcc" />
-      <link rel="canonical" href="https://kathyscleaning.com" />
-      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <meta name="msapplication-TileColor" content="#1e5fcc" />
-      <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      <meta name="HandheldFriendly" content="true" />
-      <meta name="MobileOptimized" content="320" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Kathy's House Cleaning" />
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Kathy's House Cleaning: Servicio profesional de limpieza en Seattle y alrededores. Hogares, oficinas, mudanzas, limpieza profunda. Puntualidad, confianza y calidad. Cotiza hoy!" />
-    <meta name="keywords" content="limpieza, limpieza de casas, limpieza profesional, limpieza Seattle, limpieza oficinas, limpieza profunda, mudanzas, limpieza comercial, limpieza hogar, limpieza Washington, limpieza Renton, limpieza ventanas, limpieza alfombras, limpieza tapicería, limpieza confiable, limpieza puntual, cotizar limpieza, servicio de limpieza" />
-    <meta name="author" content="Catalina Galicia, Christopher Zambrano" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Kathy's House Cleaning - Limpieza Profesional en Seattle" />
-    <meta property="og:description" content="Servicio de limpieza profesional para hogares y oficinas en Seattle, Washington. Cotiza tu limpieza hoy!" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kathyscleaning.com" />
-    <meta property="og:image" content="https://kathyscleaning.com/og-image.jpg" />
-    <meta property="og:locale" content="es_ES" />
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Kathy's House Cleaning - Limpieza Profesional en Seattle" />
-    <meta name="twitter:description" content="Servicio de limpieza profesional para hogares y oficinas en Seattle, Washington. Cotiza tu limpieza hoy!" />
-    <meta name="twitter:image" content="https://kathyscleaning.com/og-image.jpg" />
-    <meta name="twitter:site" content="@kathyscleaning" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kathy's House Cleaning</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./src/output.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            playfair: ['"Playfair Display"', 'serif'],
-            dm: ['"DM Sans"', 'sans-serif'],
-          },
-          colors: {
-            navy: {
-              950: '#050e1f',
-              900: '#0a1f44',
-              800: '#0f2d5e',
-              700: '#1a3a6e',
-              600: '#1e5fcc',
-            },
-          },
-          keyframes: {
-            float: {
-              '0%,100%': { transform: 'translateY(0px)' },
-              '50%':      { transform: 'translateY(-14px)' },
-            },
-            fadeUp: {
-              '0%':   { opacity: '0', transform: 'translateY(32px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            },
-            bubbleRise: {
-              '0%':   { transform: 'translateY(110vh) scale(0.3)', opacity: '0' },
-              '10%':  { opacity: '0.8' },
-              '90%':  { opacity: '0.4' },
-              '100%': { transform: 'translateY(-15vh) scale(1)',   opacity: '0' },
-            },
-            logoPulse: {
-              '0%,100%': { boxShadow: '0 0 35px rgba(96,165,250,0.4), 0 8px 24px rgba(0,0,0,0.35)' },
-              '50%':      { boxShadow: '0 0 70px rgba(96,165,250,0.75),0 8px 24px rgba(0,0,0,0.35)' },
-            },
-          },
-          animation: {
-            float:       'float 3.5s ease-in-out infinite',
-            fadeUp:      'fadeUp 0.9s cubic-bezier(.22,1,.36,1) both',
-            'fadeUp-d1': 'fadeUp 0.9s cubic-bezier(.22,1,.36,1) 0.15s both',
-            'fadeUp-d2': 'fadeUp 0.9s cubic-bezier(.22,1,.36,1) 0.30s both',
-            'fadeUp-d3': 'fadeUp 0.9s cubic-bezier(.22,1,.36,1) 0.45s both',
-            bubbleRise:  'bubbleRise linear infinite',
-            logoPulse:   'logoPulse 3s ease-in-out infinite',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; }
-
-    .nav-glass {
-      background: rgba(10,31,68,.9);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(96,165,250,.12);
-    }
-    .hero-bg {
-      background-color: #0a1f44;
-      background-image:
-        radial-gradient(ellipse 80% 60% at 15% 50%, rgba(30,95,204,.45)  0%, transparent 60%),
-        radial-gradient(ellipse 60% 70% at 85% 25%, rgba(59,130,246,.25) 0%, transparent 55%),
-        radial-gradient(ellipse 40% 40% at 60% 85%, rgba(96,165,250,.18) 0%, transparent 50%);
-    }
-    .hero-grid {
-      background-image:
-        linear-gradient(rgba(96,165,250,.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(96,165,250,.05) 1px, transparent 1px);
-      background-size: 55px 55px;
-    }
-    .logo-box {
-      background: linear-gradient(135deg,#1e5fcc,#60a5fa);
-      animation: logoPulse 3s ease-in-out infinite;
-    }
-    .bubble {
-      position: absolute;
-      border-radius: 9999px;
-      background: rgba(96,165,250,.06);
-      border: 1px solid rgba(96,165,250,.1);
-      animation: bubbleRise linear infinite;
-    }
-    .btn-primary {
-      display: inline-block;
-      background: linear-gradient(135deg,#1e5fcc,#3b82f6);
-      color: #fff; font-weight: 600;
-      border-radius: 9999px;
-      transition: all .3s;
-    }
-    .btn-primary:hover {
-      background: linear-gradient(135deg,#3b82f6,#60a5fa);
-      box-shadow: 0 8px 25px rgba(59,130,246,.45);
-      transform: translateY(-2px);
-    }
-    .btn-outline {
-      display: inline-block;
-      color: #fff; font-weight: 600;
-      border-radius: 9999px;
-      border: 1px solid rgba(96,165,250,.3);
-      transition: all .3s;
-    }
-    .btn-outline:hover {
-      border-color: rgba(96,165,250,.7);
-      background: rgba(96,165,250,.1);
-    }
-    .service-card {
-      background: #fff;
-      border: 1px solid #dbeafe;
-      border-radius: 1.5rem;
-      padding: 2rem;
-      transition: all .3s;
-      box-shadow: 0 1px 3px rgba(0,0,0,.06);
-    }
-    .service-card:hover {
-      box-shadow: 0 20px 40px rgba(10,31,68,.12);
-      transform: translateY(-5px);
-      border-color: rgba(59,130,246,.35);
-    }
-    .service-icon {
-      width: 3.5rem; height: 3.5rem;
-      border-radius: 1rem;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; margin-bottom: 1.25rem;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-    }
-    .contact-link {
-      display: flex; align-items: center; gap: 1rem;
-      padding: 1.25rem 1.5rem;
-      border-radius: 1rem;
-      border: 1px solid rgba(96,165,250,.15);
-      background: rgba(255,255,255,.04);
-      text-decoration: none;
-      transition: all .3s;
-    }
-    .contact-link:hover {
-      background: rgba(96,165,250,.1);
-      border-color: rgba(96,165,250,.4);
-      transform: translateX(5px);
-    }
-    .contact-icon {
-      width: 3rem; height: 3rem; flex-shrink: 0;
-      border-radius: .75rem;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; color: #60a5fa;
-      background: rgba(96,165,250,.12);
-      border: 1px solid rgba(96,165,250,.2);
-    }
-    .social-btn {
-      width: 2.75rem; height: 2.75rem;
-      border-radius: .75rem;
-      display: flex; align-items: center; justify-content: center;
-      color: #93c5fd;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(96,165,250,.15);
-      transition: all .3s;
-      text-decoration: none;
-    }
-    .social-btn:hover {
-      background: rgba(96,165,250,.2);
-      border-color: rgba(96,165,250,.5);
-      color: #fff;
-      transform: translateY(-3px);
-    }
-    .gradient-line {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(96,165,250,.35), transparent);
-    }
-    .accent-bar {
-      width: 4rem; height: .25rem; margin: 0 auto;
-      border-radius: 9999px;
-      background: linear-gradient(90deg,#1e5fcc,#60a5fa);
-    }
-    .reveal {
-      opacity: 0; transform: translateY(28px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-d1 { transition-delay: .1s; }
-    .reveal-d2 { transition-delay: .2s; }
-    .reveal-d3 { transition-delay: .3s; }
-    .reveal-d4 { transition-delay: .4s; }
-    .reveal-d5 { transition-delay: .5s; }
-  </style>
 </head>
 
-<body class="bg-white text-navy-900 overflow-x-hidden">
+<body>
 
-  <!-- ══════════════════════ SELECTOR DE IDIOMA FIJO ══════════════════════ -->
-
-  <!-- ══════════════════════ NAVBAR ══════════════════════ -->
-  <nav class="nav-glass fixed top-0 left-0 right-0 z-50 px-8 lg:px-16 py-4">
-    <div class="max-w-6xl mx-auto flex items-center justify-between">
-      <span class="font-playfair text-white text-lg font-bold tracking-tight">
-        Kathy’s <span class="text-blue-400">House Cleaning</span>
-      </span>
-      <ul class="hidden md:flex gap-8 list-none m-0 p-0">
-        <li><a href="#inicio"    data-i18n="nav_home"    class="text-gray-300 hover:text-blue-400 text-sm font-medium tracking-wide transition-colors">Inicio</a></li>
-        <li><a href="#servicios" data-i18n="nav_services" class="text-gray-300 hover:text-blue-400 text-sm font-medium tracking-wide transition-colors">Servicios</a></li>
-        <li><a href="#contacto"  data-i18n="nav_contact"  class="text-gray-300 hover:text-blue-400 text-sm font-medium tracking-wide transition-colors">Contacto</a></li>
-      </ul>
-      <a href="#contacto" class="btn-primary hidden md:inline-block text-sm px-5 py-2" data-i18n="quote">Cotizar</a>
-    </div>
+  <!-- NAVBAR -->
+  <nav class="nav-glass">
+    <span class="nav-logo">Kathy's <span>House Cleaning</span></span>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio" onclick="closeNav()">Inicio</a></li>
+      <li><a href="#servicios" onclick="closeNav()">Servicios</a></li>
+      <li><a href="#contacto" onclick="closeNav()">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </nav>
 
-  <!-- ══════════════════════ HERO ══════════════════════ -->
-  <section id="inicio" class="hero-bg hero-grid relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="bubble w-20 h-20" style="left:7%;  animation-duration:14s;animation-delay:0s;"></div>
+    <div class="bubble w-10 h-10" style="left:22%;animation-duration:18s;animation-delay:3s;"></div>
+    <div class="bubble w-28 h-28" style="left:58%;animation-duration:12s;animation-delay:1s;"></div>
+    <div class="bubble w-8  h-8"  style="left:73%;animation-duration:10s;animation-delay:5s;"></div>
+    <div class="bubble w-16 h-16" style="left:87%;animation-duration:16s;animation-delay:2s;"></div>
 
-    <div class="bubble w-20 h-20" style="left:7%;  animation-duration:14s; animation-delay:0s;"></div>
-    <div class="bubble w-10 h-10" style="left:22%; animation-duration:18s; animation-delay:3s;"></div>
-    <div class="bubble w-28 h-28" style="left:58%; animation-duration:12s; animation-delay:1s;"></div>
-    <div class="bubble w-8  h-8"  style="left:73%; animation-duration:10s; animation-delay:5s;"></div>
-    <div class="bubble w-16 h-16" style="left:87%; animation-duration:16s; animation-delay:2s;"></div>
-    <div class="bubble w-12 h-12" style="left:43%; animation-duration:20s; animation-delay:7s;"></div>
-
-    <div class="relative z-10 flex flex-col items-center gap-10 px-6 text-center">
-
-      <!-- Logo + Nombre en UNA sola línea -->
-      <div class="flex items-center gap-6 animate-fadeUp">
-        <div class="text-left whitespace-nowrap">
-          <h1 class="font-playfair text-white font-black leading-none tracking-tight"
-              style="font-size: clamp(1.9rem, 4.5vw, 3.8rem);">
-            Kathy's <span class="text-blue-400">House</span> Cleaning
-          </h1>
-          <p class="text-blue-300 text-xs md:text-sm font-light tracking-[.3em] uppercase mt-2">
-            <span data-i18n="hero_sub">Limpieza Profesional · Confiable · Puntual</span>
-          </p>
-        </div>
+    <div class="hero-content">
+      <h1>Kathy's <span class="accent">House</span> Cleaning</h1>
+      <p class="hero-sub">Limpieza Profesional · Confiable · Puntual</p>
+      <p class="desc">Tu hogar merece el mejor cuidado. Dejamos cada rincón impecable con dedicación y productos de primera calidad.</p>
+      <div class="hero-btns">
+        <a href="#contacto"  class="btn-explosion">Free Estimates</a>
       </div>
-
-      <p class="animate-fadeUp-d1 text-gray-400 text-base md:text-lg max-w-md leading-relaxed">
-        <span data-i18n="hero_desc">Tu hogar merece el mejor cuidado. Dejamos cada rincón impecable con dedicación y productos de primera calidad.</span>
-      </p>
-
-      <div class="animate-fadeUp-d2 flex gap-4 flex-wrap justify-center">
-        <a href="#contacto"  class="btn-primary text-sm px-8 py-3" data-i18n="hero_cta1">Solicitar Servicio</a>
-        <a href="#servicios" class="btn-outline  text-sm px-8 py-3" data-i18n="hero_cta2">Ver Servicios</a>
-      </div>
-
-      <div class="animate-fadeUp-d3 flex items-center gap-8">
-        <div class="text-center">
-          <span class="block font-playfair text-blue-400 text-3xl font-bold">+500</span>
-          <span class="text-gray-500 text-xs tracking-widest uppercase" data-i18n="homes">Hogares</span>
-        </div>
-        <div class="w-px h-10 bg-blue-400/20"></div>
-        <div class="text-center">
-          <span class="block font-playfair text-blue-400 text-3xl font-bold">12</span>
-          <span class="text-gray-500 text-xs tracking-widest uppercase" data-i18n="years">Años</span>
-        </div>
-        <div class="w-px h-10 bg-blue-400/20"></div>
-        <div class="text-center">
-          <span class="block font-playfair text-blue-400 text-3xl font-bold">100%</span>
-          <span class="text-gray-500 text-xs tracking-widest uppercase" data-i18n="satisfaction">Satisfacción</span>
-        </div>
-      </div>
-    </div>
-
-    
-  </section>
-
-  <!-- ══════════════════════ SERVICIOS ══════════════════════ -->
-  <section id="servicios" class="py-24 px-6 bg-slate-50">
-    <div class="max-w-6xl mx-auto">
-
-      <div class="text-center mb-16 reveal">
-        <p class="text-blue-600 text-xs font-semibold tracking-widest uppercase mb-3" data-i18n="offer">Lo que ofrecemos</p>
-        <h2 class="font-playfair font-bold text-navy-900 text-4xl md:text-5xl mb-4" data-i18n="our_services">Nuestros Servicios</h2>
-        <div class="accent-bar"></div>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <div class="service-card reveal reveal-d1">
-          <div class="service-icon">🏠</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="residential">Limpieza Residencial</h3>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="residential_desc">Limpieza completa del hogar: cocina, baños, habitaciones y más. Disponible semanal, quincenal o mensual.</p>
-          <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="weekly">Semanal</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="biweekly">Quincenal</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="monthly">Mensual</span>
-          </div>
-        </div>
-
-        <div class="service-card reveal reveal-d2">
-          <div class="service-icon">🏢</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="commercial">Limpieza Comercial</h3>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="commercial_desc">Oficinas, locales y espacios de trabajo limpios y presentables para dar la mejor imagen a tus clientes.</p>
-          <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="offices">Oficinas</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="stores">Locales</span>
-          </div>
-        </div>
-
-        <div class="service-card reveal reveal-d3">
-          <div class="service-icon">✨</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="deep">Limpieza Profunda</h3>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="deep_desc">Limpieza exhaustiva que incluye zonas de difícil acceso, electrodomésticos, armarios y desinfección total.</p>
-          <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="deep_clean">Deep Clean</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="disinfection">Desinfección</span>
-          </div>
-        </div>
-
-        <div class="service-card reveal reveal-d1">
-          <div class="service-icon">📦</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="moving">Mudanzas</h3>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="moving_desc">Limpieza de tu nuevo hogar antes de entrar o del anterior antes de entregarlo. ¡Listo para el siguiente capítulo!</p>
-          <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="movein">Move-in</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="moveout">Move-out</span>
-          </div>
-        </div>
-
-        <div class="service-card reveal reveal-d2">
-          <div class="service-icon">🪟</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="windows">Ventanas y Cristales</h3>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="windows_desc">Limpieza interior y exterior de ventanas, puertas de vidrio y espejos para una visión perfectamente clara.</p>
-          <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="interior">Interior</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="exterior">Exterior</span>
-          </div>
-        </div>
-
-        <div class="service-card reveal reveal-d3">
-          <div class="service-icon">🛋️</div>
-          <h3 class="font-playfair text-navy-900 text-xl font-bold mb-2" data-i18n="carpets">Alfombras y Tapicería</h3>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="carpets_desc">Lavado y tratamiento especializado de alfombras, sofás y tapicería para eliminar manchas, gérmenes y malos olores.</p>
-          <div class="mt-5 flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="carpets2">Alfombras</span>
-            <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100" data-i18n="sofas">Sofás</span>
-          </div>
-        </div>
-
+      <div class="hero-stats">
+        <div><span class="stat-num">+500</span><span class="stat-label">Hogares</span></div>
+        <div class="stat-div"></div>
+        <div><span class="stat-num">12</span><span class="stat-label">Años</span></div>
+        <div class="stat-div"></div>
+        <div><span class="stat-num">100%</span><span class="stat-label">Satisfacción</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════ CONTACTO ══════════════════════ -->
-  <section id="contacto" class="py-24 px-6 bg-navy-900 relative overflow-hidden">
-    <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
-    <div class="absolute top-0 inset-x-0 h-px" style="background:linear-gradient(90deg,transparent,rgba(96,165,250,.5),transparent)"></div>
+  <!-- Ola Hero → Servicios -->
+  <div style="background:#9adce8;line-height:0;">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:70px;">
+      <path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="#EEF9FB"/>
+    </svg>
+  </div>
 
-    <div class="relative z-10 max-w-4xl mx-auto">
+  <!-- SERVICIOS -->
+  <section id="servicios" class="services-section">
+    <div style="text-align:center;">
+      <p class="section-eyebrow">Lo que ofrecemos</p>
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="accent-bar"></div>
+    </div>
 
-      <div class="text-center mb-14 reveal">
-        <p class="text-blue-400 text-xs font-semibold tracking-widest uppercase mb-3" data-i18n="here">Estamos para ti</p>
-        <h2 class="font-playfair text-white font-bold text-4xl md:text-5xl mb-4" data-i18n="contact_us">Contáctanos</h2>
-        <div class="accent-bar"></div>
-        <p class="text-gray-400 mt-5 text-base max-w-md mx-auto leading-relaxed">
-          <span data-i18n="contact_desc">¿Listo para tener tu hogar impecable? Escríbenos o llámanos — respondemos rápido.</span>
-        </p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-house"></i></div>
+        <h3>Limpieza Residencial</h3>
+        <p>Limpieza completa del hogar: cocina, baños, habitaciones y más. Disponible semanal, quincenal o mensual.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-building"></i></div>
+        <h3>Limpieza Comercial</h3>
+        <p>Oficinas, locales y espacios de trabajo limpios y presentables para dar la mejor imagen a tus clientes.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+        <h3>Limpieza Profunda</h3>
+        <p>Limpieza exhaustiva que incluye zonas de difícil acceso, electrodomésticos, armarios y desinfección total.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+        <h3>Mudanzas</h3>
+        <p>Limpieza de tu nuevo hogar antes de entrar o del anterior antes de entregarlo. ¡Listo para el siguiente capítulo!</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-window-maximize"></i></div>
+        <h3>Ventanas y Cristales</h3>
+        <p>Limpieza interior y exterior de ventanas, puertas de vidrio y espejos para una visión perfectamente clara.</p>
+      </div>
+  </section>
+
+  <!-- Ola Servicios → Contacto -->
+  <div style="background:#EEF9FB;line-height:0;">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:70px;">
+      <path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="#77CBDA"/>
+    </svg>
+  </div>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact-section">
+    <div class="contact-inner">
+      <div style="text-align:center;">
+        <p class="section-eyebrow" style="color:rgba(27,58,92,0.7);">Estamos para ti</p>
+        <h2 class="contact-title">Contáctanos</h2>
+        <div class="accent-bar-w"></div>
+        <p class="contact-desc">¿Listo para tener tu hogar impecable? Escríbenos o llámanos — respondemos rápido.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
-
-        <a href="mailto:cathymybusiness01@gmail.com" class="contact-link reveal reveal-d1">
-          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+      <div class="contact-grid">
+        <a href="mailto:cathymybusiness01@gmail.com" class="contact-link">
+          <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
           <div>
-            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5" data-i18n="email">Correo electrónico</p>
-            <p class="text-white font-semibold text-sm">cathymybusiness01@gmail.com</p>
+            <p class="clabel">Correo electrónico</p>
+            <p class="cvalue">cathymybusiness01@gmail.com</p>
           </div>
-          <i class="fa-solid fa-arrow-right text-blue-400/40 ml-auto text-xs"></i>
+          <i class="fa-solid fa-arrow-right carrow"></i>
         </a>
-
-        <a href="https://wa.me/12068525970" target="_blank" class="contact-link reveal reveal-d2">
-          <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <a href="https://wa.me/12068525970" target="_blank" class="contact-link">
+          <div class="contact-icon-box"><i class="fa-brands fa-whatsapp"></i></div>
           <div>
-            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5" data-i18n="whatsapp">WhatsApp</p>
-            <p class="text-white font-semibold text-sm">(206) 852-5970</p>
+            <p class="clabel">WhatsApp</p>
+            <p class="cvalue">(206) 852-5970</p>
           </div>
-          <i class="fa-solid fa-arrow-right text-blue-400/40 ml-auto text-xs"></i>
+          <i class="fa-solid fa-arrow-right carrow"></i>
         </a>
-
-        <a href="tel:+12068525970" class="contact-link reveal reveal-d3">
-          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+        <a href="tel:+12068525970" class="contact-link">
+          <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
           <div>
-            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5" data-i18n="calls">Llamadas</p>
-            <p class="text-white font-semibold text-sm">(206) 852-5970</p>
+            <p class="clabel">Llamadas</p>
+            <p class="cvalue">(206) 852-5970</p>
           </div>
-          <i class="fa-solid fa-arrow-right text-blue-400/40 ml-auto text-xs"></i>
+          <i class="fa-solid fa-arrow-right carrow"></i>
         </a>
-
-        <div class="contact-link reveal reveal-d4 cursor-default">
-          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="contact-link" style="cursor:default;">
+          <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
           <div>
-            <p class="text-gray-400 text-xs uppercase tracking-widest mb-0.5" data-i18n="address">Dirección</p>
-            <p class="text-white font-semibold text-sm">18534 139th Pl Renton WA 98058, Seattle, Washington</p>
+            <p class="clabel">Dirección</p>
+            <p class="cvalue">18534 139th Pl Renton WA 98058, Seattle, WA</p>
           </div>
         </div>
-
       </div>
 
-      <div class="flex justify-center reveal reveal-d5">
-        <div class="flex items-center gap-3 px-6 py-3 rounded-full"
-             style="background:rgba(96,165,250,.06); border:1px solid rgba(96,165,250,.18);">
-          <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-          <span class="text-gray-300 text-sm" data-i18n="hours">Disponibles Lun – Sáb &nbsp;·&nbsp; 7:00 AM – 7:00 PM<br>Solo trabajamos en un rango de 45 minutos cerca de Seattle</span>
+      <div style="text-align:center;">
+        <div class="hours-pill" style="display:inline-flex;">
+          <div class="dot-green"></div>
+          <span>Disponibles Lun – Vie &nbsp;·&nbsp; 7:00 AM – 7:00 PM &nbsp;·&nbsp; Rango 45 min cerca de Seattle</span>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ══════════════════════ FOOTER ══════════════════════ -->
-  <footer class="bg-navy-950 px-6 pt-14 pb-8">
-    <div class="max-w-6xl mx-auto">
-
-      <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 mb-10">
-
-        <div class="text-center md:text-left">
-          <div class="flex items-center gap-3 justify-center md:justify-start mb-3">
-            <span class="font-playfair text-white text-lg font-bold">
-              Kathy’s <span class="text-blue-400">House Cleaning</span>
-            </span>
-          </div>
-          <p class="text-gray-500 text-sm max-w-xs leading-relaxed">
-            <span data-i18n="footer_desc">12 years of experience. House cleaning, move out, deep cleaning. Owner: Catalina Galicia.</span>
-          </p>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Kathy's <span>House Cleaning</span></div>
+          <p class="footer-desc">12 años de experiencia. Limpieza de casas, mudanzas, limpieza profunda. Propietaria: Catalina Galicia.</p>
         </div>
-
-        <div class="text-center">
-          <p class="text-gray-500 text-xs uppercase tracking-widest mb-4" data-i18n="follow">Síguenos</p>
-          <div class="flex items-center gap-3 justify-center flex-wrap">
-            <a href="https://facebook.com/kathysclean"  target="_blank" class="social-btn" title="Facebook">  <i class="fa-brands fa-facebook-f text-sm"></i></a>
-            <a href="https://instagram.com/kathysclean" target="_blank" class="social-btn" title="Instagram"> <i class="fa-brands fa-instagram   text-sm"></i></a>
-            
-            <a href="https://wa.me/12068525970"         target="_blank" class="social-btn" title="WhatsApp">  <i class="fa-brands fa-whatsapp    text-sm"></i></a>
+        <div>
+          <p class="social-label">Síguenos</p>
+          <div class="social-btns">
+            <a href="https://facebook.com/kathysclean"  target="_blank" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/kathysclean" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/12068525970"         target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
-
       </div>
-
-      <div class="gradient-line mb-6"></div>
-
-      <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-600">
-        <span data-i18n="copyright">© 2026 Kathy's House Cleaning. Todos los derechos reservados.<br>Desarrollado por <a href="https://www.linkedin.com/in/christopher-zambrano-943825318/?locale=en_US" target="_blank" style="color:#60a5fa;text-decoration:none;">Christopher Zambrano</a></span>
-        <div class="flex gap-6">
-          
-          <a href="#contacto" class="hover:text-blue-400 transition-colors" data-i18n="footer_contact">Contacto</a>
-        </div>
+      <div class="footer-line"></div>
+      <div class="footer-bottom">
+        <span>© 2026 Kathy's House Cleaning. Todos los derechos reservados.<br>
+          Desarrollado por <a href="https://www.linkedin.com/in/christopher-zambrano-943825318/?locale=en_US" target="_blank">Christopher Zambrano</a>.</span>
       </div>
-
     </div>
   </footer>
 
   <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    const toggleIcon = navToggle.querySelector('i');
 
-    
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      
+      // Toggle icon between bars and X
+      if (navLinks.classList.contains('active')) {
+        toggleIcon.classList.remove('fa-bars');
+        toggleIcon.classList.add('fa-xmark');
+      } else {
+        toggleIcon.classList.remove('fa-xmark');
+        toggleIcon.classList.add('fa-bars');
+      }
+    });
+
+    // Close nav when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+        toggleIcon.classList.remove('fa-xmark');
+        toggleIcon.classList.add('fa-bars');
+      }
+    });
+
+    // Close nav function for menu items
+    function closeNav() {
+      navLinks.classList.remove('active');
+      toggleIcon.classList.remove('fa-xmark');
+      toggleIcon.classList.add('fa-bars');
+    }
   </script>
 
 </body>
