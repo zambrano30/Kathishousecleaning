@@ -26,11 +26,11 @@
 
   <!-- HERO -->
   <section id="inicio" class="hero">
-    <div class="bubble w-20 h-20" style="left:7%;  animation-duration:14s;animation-delay:0s;"></div>
-    <div class="bubble w-10 h-10" style="left:22%;animation-duration:18s;animation-delay:3s;"></div>
-    <div class="bubble w-28 h-28" style="left:58%;animation-duration:12s;animation-delay:1s;"></div>
-    <div class="bubble w-8  h-8"  style="left:73%;animation-duration:10s;animation-delay:5s;"></div>
-    <div class="bubble w-16 h-16" style="left:87%;animation-duration:16s;animation-delay:2s;"></div>
+    <div class="bubble w-20 h-20 left-[7%] [animation-duration:14s] [animation-delay:0s]"></div>
+    <div class="bubble w-10 h-10 left-[22%] [animation-duration:18s] [animation-delay:3s]"></div>
+    <div class="bubble w-28 h-28 left-[58%] [animation-duration:12s] [animation-delay:1s]"></div>
+    <div class="bubble w-8  h-8  left-[73%] [animation-duration:10s] [animation-delay:5s]"></div>
+    <div class="bubble w-16 h-16 left-[87%] [animation-duration:16s] [animation-delay:2s]"></div>
 
     <div class="hero-content">
       <h1>Kathy's <span class="accent">House</span> Cleaning</h1>
@@ -50,15 +50,15 @@
   </section>
 
   <!-- Ola Hero → Servicios -->
-  <div style="background:#9adce8;line-height:0;">
-    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:70px;">
+  <div class="bg-[#9adce8] leading-none">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="block w-full h-[70px]">
       <path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="#EEF9FB"/>
     </svg>
   </div>
 
   <!-- SERVICIOS -->
   <section id="servicios" class="services-section">
-    <div style="text-align:center;">
+    <div class="text-center">
       <p class="section-eyebrow">Lo que ofrecemos</p>
       <h2 class="section-title">Nuestros Servicios</h2>
       <div class="accent-bar"></div>
@@ -90,77 +90,84 @@
         <h3>Ventanas y Cristales</h3>
         <p>Limpieza interior y exterior de ventanas, puertas de vidrio y espejos para una visión perfectamente clara.</p>
       </div>
+    </div>
   </section>
 
   <!-- Ola Servicios → Contacto -->
-  <div style="background:#EEF9FB;line-height:0;">
-    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:70px;">
+  <div class="bg-bg-light leading-none">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="block w-full h-[70px]">
       <path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="#77CBDA"/>
     </svg>
   </div>
   <!-- ANTES Y DESPUÉS -->
-  <section id="galeria" style="background:#ffffff; padding: 5rem 1.5rem 4rem;">
-    <div style="text-align:center; margin-bottom:3rem;">
-      <p style="color:#1B3A5C; font-size:0.72rem; font-weight:700; letter-spacing:0.35em; text-transform:uppercase; margin-bottom:0.6rem;">Nuestro Trabajo</p>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.9rem,4vw,2.8rem); font-weight:700; color:#1B3A5C; margin:0 0 1rem;">Antes &amp; Después</h2>
-      <div style="width:4rem;height:4px;border-radius:9999px;background:linear-gradient(90deg,#1B3A5C,#77CBDA);margin:0 auto;"></div>
-      <p style="color:#4a6070; margin-top:1rem; font-size:1rem; max-width:480px; margin-left:auto; margin-right:auto;">Resultados reales — así dejamos cada espacio que tocamos.</p>
+  <section id="galeria" class="bg-white py-20 px-6">
+    <div class="text-center mb-12">
+      <p class="section-eyebrow">Nuestro Trabajo</p>
+      <h2 class="section-title">Antes &amp; Después</h2>
+      <div class="accent-bar"></div>
+      <p class="text-[#4a6070] mt-4 text-base max-w-[480px] mx-auto">Resultados reales — así dejamos cada espacio que tocamos.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(500px,1fr));gap:1.75rem;max-width:1100px;margin:0 auto;">
-      
-      <div style="background:#fff;border-radius:1.25rem;overflow:hidden;box-shadow:0 4px 20px rgba(27,58,92,0.1);border:1.5px solid #c8f0f5;">
-        <div style="display:grid;grid-template-columns:1fr 1fr;">
-          <div style="position:relative;">
-            <img src="images/one_d.jpeg" alt="Antes" style="width:100%;height:240px;object-fit:cover;display:block;filter:saturate(0.7) brightness(0.92);" />
-            <div style="position:absolute;top:0.6rem;left:0.6rem;background:rgba(180,50,50,0.9);color:#fff;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;padding:0.3rem 0.75rem;border-radius:9999px;text-transform:uppercase;">✕ Antes</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 max-w-[1100px] mx-auto">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-[1.25rem] overflow-hidden shadow-[0_4px_20px_rgba(27,58,92,0.1)] border-[1.5px] border-[#c8f0f5]">
+        <div class="grid grid-cols-2">
+          <div class="relative">
+            <img src="images/one_d.jpeg" alt="Antes" class="w-full h-48 sm:h-60 object-cover block brightness-[0.92] saturate-[0.7]" />
+            <div class="absolute top-2 left-2 bg-red-700/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✕ Antes</div>
           </div>
-          <div style="position:relative;">
-            <img src="images/one_c.jpeg" alt="Después" style="width:100%;height:240px;object-fit:cover;display:block;" />
-            <div style="position:absolute;top:0.6rem;right:0.6rem;background:rgba(27,110,60,0.9);color:#fff;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;padding:0.3rem 0.75rem;border-radius:9999px;text-transform:uppercase;">✔ Después</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0.65rem;background:#EEF9FB;border-top:1px solid #c8f0f5;">
-          <span style="color:#1B3A5C;font-size:0.82rem;font-weight:600;">✦ Transformación garantizada ✦</span>
-        </div>
-      </div>
-      <div style="background:#fff;border-radius:1.25rem;overflow:hidden;box-shadow:0 4px 20px rgba(27,58,92,0.1);border:1.5px solid #c8f0f5;">
-        <div style="display:grid;grid-template-columns:1fr 1fr;">
-          <div style="position:relative;">
-            <img src="images/two_d.jpeg" alt="Antes" style="width:100%;height:240px;object-fit:cover;display:block;filter:saturate(0.7) brightness(0.92);" />
-            <div style="position:absolute;top:0.6rem;left:0.6rem;background:rgba(180,50,50,0.9);color:#fff;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;padding:0.3rem 0.75rem;border-radius:9999px;text-transform:uppercase;">✕ Antes</div>
-          </div>
-          <div style="position:relative;">
-            <img src="images/two_c.jpeg" alt="Después" style="width:100%;height:240px;object-fit:cover;display:block;" />
-            <div style="position:absolute;top:0.6rem;right:0.6rem;background:rgba(27,110,60,0.9);color:#fff;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;padding:0.3rem 0.75rem;border-radius:9999px;text-transform:uppercase;">✔ Después</div>
+          <div class="relative">
+            <img src="images/one_c.jpeg" alt="Después" class="w-full h-48 sm:h-60 object-cover block" />
+            <div class="absolute top-2 right-2 bg-green-800/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✔ Después</div>
           </div>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0.65rem;background:#EEF9FB;border-top:1px solid #c8f0f5;">
-          <span style="color:#1B3A5C;font-size:0.82rem;font-weight:600;">✦ Transformación garantizada ✦</span>
+        <div class="flex items-center justify-center p-[0.65rem] bg-bg-light border-t border-[#c8f0f5]">
+          <span class="text-navy text-[0.82rem] font-semibold">✦ Transformación garantizada ✦</span>
         </div>
       </div>
-      <div style="background:#fff;border-radius:1.25rem;overflow:hidden;box-shadow:0 4px 20px rgba(27,58,92,0.1);border:1.5px solid #c8f0f5;">
-        <div style="display:grid;grid-template-columns:1fr 1fr;">
-          <div style="position:relative;">
-            <img src="images/three_d.jpeg" alt="Antes" style="width:100%;height:240px;object-fit:cover;display:block;filter:saturate(0.7) brightness(0.92);" />
-            <div style="position:absolute;top:0.6rem;left:0.6rem;background:rgba(180,50,50,0.9);color:#fff;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;padding:0.3rem 0.75rem;border-radius:9999px;text-transform:uppercase;">✕ Antes</div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-[1.25rem] overflow-hidden shadow-[0_4px_20px_rgba(27,58,92,0.1)] border-[1.5px] border-[#c8f0f5]">
+        <div class="grid grid-cols-2">
+          <div class="relative">
+            <img src="images/two_d.jpeg" alt="Antes" class="w-full h-48 sm:h-60 object-cover block brightness-[0.92] saturate-[0.7]" />
+            <div class="absolute top-2 left-2 bg-red-700/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✕ Antes</div>
           </div>
-          <div style="position:relative;">
-            <img src="images/three_c.jpeg" alt="Después" style="width:100%;height:240px;object-fit:cover;display:block;" />
-            <div style="position:absolute;top:0.6rem;right:0.6rem;background:rgba(27,110,60,0.9);color:#fff;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;padding:0.3rem 0.75rem;border-radius:9999px;text-transform:uppercase;">✔ Después</div>
+          <div class="relative">
+            <img src="images/two_c.jpeg" alt="Después" class="w-full h-48 sm:h-60 object-cover block" />
+            <div class="absolute top-2 right-2 bg-green-800/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✔ Después</div>
           </div>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0.65rem;background:#EEF9FB;border-top:1px solid #c8f0f5;">
-          <span style="color:#1B3A5C;font-size:0.82rem;font-weight:600;">✦ Transformación garantizada ✦</span>
+        <div class="flex items-center justify-center p-[0.65rem] bg-bg-light border-t border-[#c8f0f5]">
+          <span class="text-navy text-[0.82rem] font-semibold">✦ Transformación garantizada ✦</span>
         </div>
       </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-[1.25rem] overflow-hidden shadow-[0_4px_20px_rgba(27,58,92,0.1)] border-[1.5px] border-[#c8f0f5]">
+        <div class="grid grid-cols-2">
+          <div class="relative">
+            <img src="images/three_d.jpeg" alt="Antes" class="w-full h-48 sm:h-60 object-cover block brightness-[0.92] saturate-[0.7]" />
+            <div class="absolute top-2 left-2 bg-red-700/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✕ Antes</div>
+          </div>
+          <div class="relative">
+            <img src="images/three_c.jpeg" alt="Después" class="w-full h-48 sm:h-60 object-cover block" />
+            <div class="absolute top-2 right-2 bg-green-800/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✔ Después</div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center p-[0.65rem] bg-bg-light border-t border-[#c8f0f5]">
+          <span class="text-navy text-[0.82rem] font-semibold">✦ Transformación garantizada ✦</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- CONTACTO -->
   <section id="contacto" class="contact-section">
     <div class="contact-inner">
-      <div style="text-align:center;">
-        <p class="section-eyebrow" style="color:rgba(27,58,92,0.7);">Estamos para ti</p>
+      <div class="text-center">
+        <p class="section-eyebrow text-navy/70">Estamos para ti</p>
         <h2 class="contact-title">Contáctanos</h2>
         <div class="accent-bar-w"></div>
         <p class="contact-desc">¿Listo para tener tu hogar impecable? Escríbenos o llámanos — respondemos rápido.</p>
@@ -191,7 +198,7 @@
           </div>
           <i class="fa-solid fa-arrow-right carrow"></i>
         </a>
-        <div class="contact-link" style="cursor:default;">
+        <div class="contact-link cursor-default">
           <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
           <div>
             <p class="clabel">Dirección</p>
@@ -200,8 +207,8 @@
         </div>
       </div>
 
-      <div style="text-align:center;">
-        <div class="hours-pill" style="display:inline-flex;">
+      <div class="text-center">
+        <div class="hours-pill">
           <div class="dot-green"></div>
           <span>Disponibles Lun – Vie &nbsp;·&nbsp; 7:00 AM – 7:00 PM &nbsp;·&nbsp; Rango 45 min cerca de Seattle</span>
         </div>
