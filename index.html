@@ -15,10 +15,17 @@
   <nav class="nav-glass">
     <span class="nav-logo">Kathy's <span>House Cleaning</span></span>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#inicio" onclick="closeNav()">Inicio</a></li>
-      <li><a href="#servicios" onclick="closeNav()">Servicios</a></li>
-      <li><a href="#contacto" onclick="closeNav()">Contacto</a></li>
+      <li><a href="#inicio" onclick="closeNav()" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="#servicios" onclick="closeNav()" data-i18n="nav.services">Servicios</a></li>
+      <li><a href="#contacto" onclick="closeNav()" data-i18n="nav.contact">Contacto</a></li>
     </ul>
+    <label for="languageSelect" style="display:flex;align-items:center;gap:0.4rem;margin-left:auto;margin-right:0.8rem;color:#173954;font-weight:600;font-size:0.82rem;">
+      <span data-i18n="language.label">Idioma</span>
+      <select id="languageSelect" aria-label="Seleccionar idioma" style="border:1px solid #b6e5ee;background:#fff;padding:0.28rem 0.45rem;border-radius:999px;color:#173954;font-weight:700;cursor:pointer;">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+      </select>
+    </label>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <i class="fa-solid fa-bars"></i>
     </button>
@@ -34,17 +41,17 @@
 
     <div class="hero-content">
       <h1>Kathy's <span class="accent">House</span> Cleaning</h1>
-      <p class="hero-sub">Limpieza Profesional · Confiable · Puntual</p>
-      <p class="desc">Tu hogar merece el mejor cuidado. Dejamos cada rincón impecable con dedicación y productos de primera calidad.</p>
+      <p class="hero-sub" data-i18n="hero.sub">Limpieza Profesional · Confiable · Puntual</p>
+      <p class="desc" data-i18n="hero.desc">Tu hogar merece el mejor cuidado. Dejamos cada rincón impecable con dedicación y productos de primera calidad.</p>
       <div class="hero-btns">
-        <a href="#contacto"  class="btn-explosion">Free Estimates</a>
+        <a href="#contacto"  class="btn-explosion" data-i18n="hero.cta">Free Estimates</a>
       </div>
       <div class="hero-stats">
-        <div><span class="stat-num">+500</span><span class="stat-label">Hogares</span></div>
+        <div><span class="stat-num">+500</span><span class="stat-label" data-i18n="hero.stats.homes">Hogares</span></div>
         <div class="stat-div"></div>
-        <div><span class="stat-num">12</span><span class="stat-label">Años</span></div>
+        <div><span class="stat-num">12</span><span class="stat-label" data-i18n="hero.stats.years">Años</span></div>
         <div class="stat-div"></div>
-        <div><span class="stat-num">100%</span><span class="stat-label">Satisfacción</span></div>
+        <div><span class="stat-num">100%</span><span class="stat-label" data-i18n="hero.stats.satisfaction">Satisfacción</span></div>
       </div>
     </div>
   </section>
@@ -59,36 +66,36 @@
   <!-- SERVICIOS -->
   <section id="servicios" class="services-section">
     <div class="text-center">
-      <p class="section-eyebrow">Lo que ofrecemos</p>
-      <h2 class="section-title">Nuestros Servicios</h2>
+      <p class="section-eyebrow" data-i18n="services.eyebrow">Lo que ofrecemos</p>
+      <h2 class="section-title" data-i18n="services.title">Nuestros Servicios</h2>
       <div class="accent-bar"></div>
     </div>
 
     <div class="cards-grid">
       <div class="card">
         <div class="card-icon"><i class="fa-solid fa-house"></i></div>
-        <h3>Limpieza Residencial</h3>
-        <p>Limpieza completa del hogar: cocina, baños, habitaciones y más. Disponible semanal, quincenal o mensual.</p>
+        <h3 data-i18n="services.residential.title">Limpieza Residencial</h3>
+        <p data-i18n="services.residential.desc">Limpieza completa del hogar: cocina, baños, habitaciones y más. Disponible semanal, quincenal o mensual.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fa-solid fa-building"></i></div>
-        <h3>Limpieza Comercial</h3>
-        <p>Oficinas, locales y espacios de trabajo limpios y presentables para dar la mejor imagen a tus clientes.</p>
+        <h3 data-i18n="services.commercial.title">Limpieza Comercial</h3>
+        <p data-i18n="services.commercial.desc">Oficinas, locales y espacios de trabajo limpios y presentables para dar la mejor imagen a tus clientes.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
-        <h3>Limpieza Profunda</h3>
-        <p>Limpieza exhaustiva que incluye zonas de difícil acceso, electrodomésticos, armarios y desinfección total.</p>
+        <h3 data-i18n="services.deep.title">Limpieza Profunda</h3>
+        <p data-i18n="services.deep.desc">Limpieza exhaustiva que incluye zonas de difícil acceso, electrodomésticos, armarios y desinfección total.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
-        <h3>Mudanzas</h3>
-        <p>Limpieza de tu nuevo hogar antes de entrar o del anterior antes de entregarlo. ¡Listo para el siguiente capítulo!</p>
+        <h3 data-i18n="services.move.title">Move in and Move out</h3>
+        <p data-i18n="services.move.desc">Limpieza de tu nuevo hogar antes de entrar o del anterior antes de entregarlo. ¡Listo para el siguiente capítulo!</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fa-solid fa-window-maximize"></i></div>
-        <h3>Ventanas y Cristales</h3>
-        <p>Limpieza interior y exterior de ventanas, puertas de vidrio y espejos para una visión perfectamente clara.</p>
+        <h3 data-i18n="services.windows.title">Ventanas y Cristales</h3>
+        <p data-i18n="services.windows.desc">Limpieza interior y exterior de ventanas, puertas de vidrio y espejos para una visión perfectamente clara.</p>
       </div>
     </div>
   </section>
@@ -102,10 +109,10 @@
   <!-- ANTES Y DESPUÉS -->
   <section id="galeria" class="bg-white py-20 px-6">
     <div class="text-center mb-12">
-      <p class="section-eyebrow">Nuestro Trabajo</p>
-      <h2 class="section-title">Antes &amp; Después</h2>
+      <p class="section-eyebrow" data-i18n="gallery.eyebrow">Nuestro Trabajo</p>
+      <h2 class="section-title" data-i18n="gallery.title">Antes &amp; Después</h2>
       <div class="accent-bar"></div>
-      <p class="text-[#4a6070] mt-4 text-base max-w-[480px] mx-auto">Resultados reales — así dejamos cada espacio que tocamos.</p>
+      <p class="text-[#4a6070] mt-4 text-base max-w-[480px] mx-auto" data-i18n="gallery.desc">Resultados reales - asi dejamos cada espacio que tocamos.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-7 max-w-[1100px] mx-auto">
 
@@ -113,16 +120,16 @@
       <div class="bg-white rounded-[1.25rem] overflow-hidden shadow-[0_4px_20px_rgba(27,58,92,0.1)] border-[1.5px] border-[#c8f0f5]">
         <div class="grid grid-cols-2">
           <div class="relative">
-            <img src="images/one_d.jpeg" alt="Antes" class="w-full h-48 sm:h-60 object-cover block brightness-[0.92] saturate-[0.7]" />
-            <div class="absolute top-2 left-2 bg-red-700/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✕ Antes</div>
+            <img src="images/one_d.jpeg" alt="Antes" data-i18n-alt="gallery.beforeAlt" class="w-full h-48 sm:h-60 object-cover block brightness-[0.92] saturate-[0.7]" />
+            <div class="absolute top-2 left-2 bg-red-700/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase" data-i18n="gallery.beforeBadge">✕ Antes</div>
           </div>
           <div class="relative">
-            <img src="images/one_c.jpeg" alt="Después" class="w-full h-48 sm:h-60 object-cover block" />
-            <div class="absolute top-2 right-2 bg-green-800/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✔ Después</div>
+            <img src="images/one_c.jpeg" alt="Despues" data-i18n-alt="gallery.afterAlt" class="w-full h-48 sm:h-60 object-cover block" />
+            <div class="absolute top-2 right-2 bg-green-800/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase" data-i18n="gallery.afterBadge">✔ Despues</div>
           </div>
         </div>
         <div class="flex items-center justify-center p-[0.65rem] bg-bg-light border-t border-[#c8f0f5]">
-          <span class="text-navy text-[0.82rem] font-semibold">✦ Transformación garantizada ✦</span>
+          <span class="text-navy text-[0.82rem] font-semibold" data-i18n="gallery.guarantee">✦ Transformacion garantizada ✦</span>
         </div>
       </div>
 
@@ -130,16 +137,16 @@
       <div class="bg-white rounded-[1.25rem] overflow-hidden shadow-[0_4px_20px_rgba(27,58,92,0.1)] border-[1.5px] border-[#c8f0f5]">
         <div class="grid grid-cols-2">
           <div class="relative">
-            <img src="images/two_d.jpeg" alt="Antes" class="w-full h-48 sm:h-60 object-cover block brightness-[0.92] saturate-[0.7]" />
-            <div class="absolute top-2 left-2 bg-red-700/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✕ Antes</div>
+            <img src="images/two_d.jpeg" alt="Antes" data-i18n-alt="gallery.beforeAlt" class="w-full h-48 sm:h-60 object-cover block brightness-[0.92] saturate-[0.7]" />
+            <div class="absolute top-2 left-2 bg-red-700/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase" data-i18n="gallery.beforeBadge">✕ Antes</div>
           </div>
           <div class="relative">
-            <img src="images/two_c.jpeg" alt="Después" class="w-full h-48 sm:h-60 object-cover block" />
-            <div class="absolute top-2 right-2 bg-green-800/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✔ Después</div>
+            <img src="images/two_c.jpeg" alt="Despues" data-i18n-alt="gallery.afterAlt" class="w-full h-48 sm:h-60 object-cover block" />
+            <div class="absolute top-2 right-2 bg-green-800/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase" data-i18n="gallery.afterBadge">✔ Despues</div>
           </div>
         </div>
         <div class="flex items-center justify-center p-[0.65rem] bg-bg-light border-t border-[#c8f0f5]">
-          <span class="text-navy text-[0.82rem] font-semibold">✦ Transformación garantizada ✦</span>
+          <span class="text-navy text-[0.82rem] font-semibold" data-i18n="gallery.guarantee">✦ Transformacion garantizada ✦</span>
         </div>
       </div>
 
@@ -147,16 +154,16 @@
       <div class="bg-white rounded-[1.25rem] overflow-hidden shadow-[0_4px_20px_rgba(27,58,92,0.1)] border-[1.5px] border-[#c8f0f5]">
         <div class="grid grid-cols-2">
           <div class="relative">
-            <img src="images/three_d.jpeg" alt="Antes" class="w-full h-48 sm:h-60 object-cover block brightness-[0.92] saturate-[0.7]" />
-            <div class="absolute top-2 left-2 bg-red-700/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✕ Antes</div>
+            <img src="images/three_d.jpeg" alt="Antes" data-i18n-alt="gallery.beforeAlt" class="w-full h-48 sm:h-60 object-cover block brightness-[0.92] saturate-[0.7]" />
+            <div class="absolute top-2 left-2 bg-red-700/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase" data-i18n="gallery.beforeBadge">✕ Antes</div>
           </div>
           <div class="relative">
-            <img src="images/three_c.jpeg" alt="Después" class="w-full h-48 sm:h-60 object-cover block" />
-            <div class="absolute top-2 right-2 bg-green-800/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase">✔ Después</div>
+            <img src="images/three_c.jpeg" alt="Despues" data-i18n-alt="gallery.afterAlt" class="w-full h-48 sm:h-60 object-cover block" />
+            <div class="absolute top-2 right-2 bg-green-800/90 text-white text-[0.7rem] font-bold tracking-[0.1em] px-3 py-1 rounded-full uppercase" data-i18n="gallery.afterBadge">✔ Despues</div>
           </div>
         </div>
         <div class="flex items-center justify-center p-[0.65rem] bg-bg-light border-t border-[#c8f0f5]">
-          <span class="text-navy text-[0.82rem] font-semibold">✦ Transformación garantizada ✦</span>
+          <span class="text-navy text-[0.82rem] font-semibold" data-i18n="gallery.guarantee">✦ Transformacion garantizada ✦</span>
         </div>
       </div>
 
@@ -167,17 +174,17 @@
   <section id="contacto" class="contact-section">
     <div class="contact-inner">
       <div class="text-center">
-        <p class="section-eyebrow text-navy/70">Estamos para ti</p>
-        <h2 class="contact-title">Contáctanos</h2>
+        <p class="section-eyebrow text-navy/70" data-i18n="contact.eyebrow">Estamos para ti</p>
+        <h2 class="contact-title" data-i18n="contact.title">Contactanos</h2>
         <div class="accent-bar-w"></div>
-        <p class="contact-desc">¿Listo para tener tu hogar impecable? Escríbenos o llámanos — respondemos rápido.</p>
+        <p class="contact-desc" data-i18n="contact.desc">Listo para tener tu hogar impecable? Escribenos o llamanos - respondemos rapido.</p>
       </div>
 
       <div class="contact-grid">
         <a href="mailto:cathymybusiness01@gmail.com" class="contact-link">
           <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
           <div>
-            <p class="clabel">Correo electrónico</p>
+            <p class="clabel" data-i18n="contact.email">Correo electronico</p>
             <p class="cvalue">cathymybusiness01@gmail.com</p>
           </div>
           <i class="fa-solid fa-arrow-right carrow"></i>
@@ -193,7 +200,7 @@
         <a href="tel:+12068525970" class="contact-link">
           <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
           <div>
-            <p class="clabel">Llamadas</p>
+            <p class="clabel" data-i18n="contact.calls">Llamadas</p>
             <p class="cvalue">(206) 852-5970</p>
           </div>
           <i class="fa-solid fa-arrow-right carrow"></i>
@@ -201,7 +208,7 @@
         <div class="contact-link cursor-default">
           <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
           <div>
-            <p class="clabel">Dirección</p>
+            <p class="clabel" data-i18n="contact.address">Direccion</p>
             <p class="cvalue">18534 139th Pl Renton WA 98058, Seattle, WA</p>
           </div>
         </div>
@@ -210,7 +217,7 @@
       <div class="text-center">
         <div class="hours-pill">
           <div class="dot-green"></div>
-          <span>Disponibles Lun – Vie &nbsp;·&nbsp; 7:00 AM – 7:00 PM &nbsp;·&nbsp; Rango 45 min cerca de Seattle</span>
+          <span data-i18n="contact.hours">Disponibles Lun - Vie · 7:00 AM - 7:00 PM · Rango 45 min cerca de Seattle</span>
         </div>
       </div>
     </div>
@@ -222,10 +229,10 @@
       <div class="footer-top">
         <div>
           <div class="footer-logo">Kathy's <span>House Cleaning</span></div>
-          <p class="footer-desc">12 años de experiencia. Limpieza de casas, mudanzas, limpieza profunda. Propietaria: Catalina Galicia.</p>
+          <p class="footer-desc" data-i18n="footer.desc">12 anos de experiencia. Limpieza de casas, mudanzas, limpieza profunda. Propietaria: Catalina Galicia.</p>
         </div>
         <div>
-          <p class="social-label">Síguenos</p>
+          <p class="social-label" data-i18n="footer.follow">Siguenos</p>
           <div class="social-btns">
             <a href="https://facebook.com/kathysclean"  target="_blank" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://instagram.com/kathysclean" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
@@ -235,8 +242,8 @@
       </div>
       <div class="footer-line"></div>
       <div class="footer-bottom">
-        <span>© 2026 Kathy's House Cleaning. Todos los derechos reservados.<br>
-          Desarrollado por <a href="https://www.linkedin.com/in/christopher-zambrano-943825318/?locale=en_US" target="_blank">Christopher Zambrano</a>.</span>
+        <span><span data-i18n="footer.rights">© 2026 Kathy's House Cleaning. Todos los derechos reservados.</span><br>
+          <span data-i18n="footer.dev">Desarrollado por</span> <a href="https://www.linkedin.com/in/christopher-zambrano-943825318/?locale=en_US" target="_blank">Christopher Zambrano</a>.</span>
       </div>
     </div>
   </footer>
@@ -245,7 +252,128 @@
     // Mobile Navigation Toggle
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
+    const languageSelect = document.getElementById('languageSelect');
     const toggleIcon = navToggle.querySelector('i');
+
+    const translations = {
+      es: {
+        'nav.home': 'Inicio',
+        'nav.services': 'Servicios',
+        'nav.contact': 'Contacto',
+        'language.label': 'Idioma',
+        'hero.sub': 'Limpieza Profesional · Confiable · Puntual',
+        'hero.desc': 'Tu hogar merece el mejor cuidado. Dejamos cada rincon impecable con dedicacion y productos de primera calidad.',
+        'hero.cta': 'Estimado Gratis',
+        'hero.stats.homes': 'Hogares',
+        'hero.stats.years': 'Anos',
+        'hero.stats.satisfaction': 'Satisfaccion',
+        'services.eyebrow': 'Lo que ofrecemos',
+        'services.title': 'Nuestros Servicios',
+        'services.residential.title': 'Limpieza Residencial',
+        'services.residential.desc': 'Limpieza completa del hogar: cocina, banos, habitaciones y mas. Disponible semanal, quincenal o mensual.',
+        'services.commercial.title': 'Limpieza Comercial',
+        'services.commercial.desc': 'Oficinas, locales y espacios de trabajo limpios y presentables para dar la mejor imagen a tus clientes.',
+        'services.deep.title': 'Limpieza Profunda',
+        'services.deep.desc': 'Limpieza exhaustiva que incluye zonas de dificil acceso, electrodomesticos, armarios y desinfeccion total.',
+        'services.move.title': 'Mudanza: Entrada y Salida',
+        'services.move.desc': 'Limpieza de tu nuevo hogar antes de entrar o del anterior antes de entregarlo. Listo para el siguiente capitulo.',
+        'services.windows.title': 'Ventanas y Cristales',
+        'services.windows.desc': 'Limpieza interior y exterior de ventanas, puertas de vidrio y espejos para una vision perfectamente clara.',
+        'gallery.eyebrow': 'Nuestro Trabajo',
+        'gallery.title': 'Antes y Despues',
+        'gallery.desc': 'Resultados reales - asi dejamos cada espacio que tocamos.',
+        'gallery.beforeBadge': 'Antes',
+        'gallery.afterBadge': 'Despues',
+        'gallery.guarantee': 'Transformacion garantizada',
+        'gallery.beforeAlt': 'Antes',
+        'gallery.afterAlt': 'Despues',
+        'contact.eyebrow': 'Estamos para ti',
+        'contact.title': 'Contactanos',
+        'contact.desc': 'Listo para tener tu hogar impecable? Escribenos o llamanos - respondemos rapido.',
+        'contact.email': 'Correo electronico',
+        'contact.calls': 'Llamadas',
+        'contact.address': 'Direccion',
+        'contact.hours': 'Disponibles Lun - Vie · 7:00 AM - 7:00 PM · Rango 45 min cerca de Seattle',
+        'footer.desc': '12 anos de experiencia. Limpieza de casas, mudanzas, limpieza profunda. Propietaria: Catalina Galicia.',
+        'footer.follow': 'Siguenos',
+        'footer.rights': '© 2026 Kathy\'s House Cleaning. Todos los derechos reservados.',
+        'footer.dev': 'Desarrollado por'
+      },
+      en: {
+        'nav.home': 'Home',
+        'nav.services': 'Services',
+        'nav.contact': 'Contact',
+        'language.label': 'Language',
+        'hero.sub': 'Professional Cleaning · Reliable · On Time',
+        'hero.desc': 'Your home deserves the best care. We leave every corner spotless using dedication and top-quality products.',
+        'hero.cta': 'Free Estimate',
+        'hero.stats.homes': 'Homes',
+        'hero.stats.years': 'Years',
+        'hero.stats.satisfaction': 'Satisfaction',
+        'services.eyebrow': 'What we offer',
+        'services.title': 'Our Services',
+        'services.residential.title': 'Residential Cleaning',
+        'services.residential.desc': 'Complete home cleaning: kitchen, bathrooms, bedrooms, and more. Weekly, biweekly, or monthly options available.',
+        'services.commercial.title': 'Commercial Cleaning',
+        'services.commercial.desc': 'Clean and presentable offices, stores, and workspaces to give your clients the best impression.',
+        'services.deep.title': 'Deep Cleaning',
+        'services.deep.desc': 'Detailed cleaning for hard-to-reach areas, appliances, cabinets, and full disinfection.',
+        'services.move.title': 'Move In and Move Out',
+        'services.move.desc': 'Cleaning for your new home before moving in or your previous home before handing it over. Ready for your next chapter.',
+        'services.windows.title': 'Windows and Glass',
+        'services.windows.desc': 'Interior and exterior cleaning for windows, glass doors, and mirrors for a crystal-clear view.',
+        'gallery.eyebrow': 'Our Work',
+        'gallery.title': 'Before and After',
+        'gallery.desc': 'Real results - this is how we leave every space we touch.',
+        'gallery.beforeBadge': 'Before',
+        'gallery.afterBadge': 'After',
+        'gallery.guarantee': 'Guaranteed transformation',
+        'gallery.beforeAlt': 'Before',
+        'gallery.afterAlt': 'After',
+        'contact.eyebrow': 'We are here for you',
+        'contact.title': 'Contact Us',
+        'contact.desc': 'Ready to have a spotless home? Message or call us - we respond quickly.',
+        'contact.email': 'Email',
+        'contact.calls': 'Calls',
+        'contact.address': 'Address',
+        'contact.hours': 'Available Mon - Fri · 7:00 AM - 7:00 PM · 45 min range near Seattle',
+        'footer.desc': '12 years of experience. Home cleaning, move cleaning, deep cleaning. Owner: Catalina Galicia.',
+        'footer.follow': 'Follow us',
+        'footer.rights': '© 2026 Kathy\'s House Cleaning. All rights reserved.',
+        'footer.dev': 'Developed by'
+      }
+    };
+
+    function applyLanguage(lang) {
+      const locale = translations[lang] ? lang : 'es';
+      document.documentElement.lang = locale;
+
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        const value = translations[locale][key];
+        if (value) {
+          el.textContent = value;
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+        const key = el.getAttribute('data-i18n-alt');
+        const value = translations[locale][key];
+        if (value) {
+          el.setAttribute('alt', value);
+        }
+      });
+
+      languageSelect.value = locale;
+      localStorage.setItem('siteLanguage', locale);
+    }
+
+    const savedLanguage = localStorage.getItem('siteLanguage') || 'es';
+    applyLanguage(savedLanguage);
+
+    languageSelect.addEventListener('change', (event) => {
+      applyLanguage(event.target.value);
+    });
 
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
