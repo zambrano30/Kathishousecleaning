@@ -18,10 +18,18 @@
       <li><a href="#inicio" onclick="closeNav()" data-i18n="nav.home">Inicio</a></li>
       <li><a href="#servicios" onclick="closeNav()" data-i18n="nav.services">Servicios</a></li>
       <li><a href="#contacto" onclick="closeNav()" data-i18n="nav.contact">Contacto</a></li>
+      <li class="nav-lang-mobile">
+        <label for="languageSelectMobile" class="block text-center">
+          
+          <select id="languageSelectMobile" aria-label="Seleccionar idioma" class="language-select-mobile ">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+          </select>
+        </label>
+      </li>
     </ul>
-    <label for="languageSelect" style="display:flex;align-items:center;gap:0.4rem;margin-left:auto;margin-right:0.8rem;color:#173954;font-weight:600;font-size:0.82rem;">
-      <span data-i18n="language.label">Idioma</span>
-      <select id="languageSelect" aria-label="Seleccionar idioma" style="border:1px solid #b6e5ee;background:#fff;padding:0.28rem 0.45rem;border-radius:999px;color:#173954;font-weight:700;cursor:pointer;">
+    <label for="languageSelect" class="language-switcher hidden md:flex">
+      <select id="languageSelect" aria-label="Seleccionar idioma" class="language-select">
         <option value="es">ES</option>
         <option value="en">EN</option>
       </select>
@@ -205,13 +213,14 @@
           </div>
           <i class="fa-solid fa-arrow-right carrow"></i>
         </a>
-        <div class="contact-link cursor-default">
+        <a href="https://www.google.com/maps/search/?api=1&query=18534+139th+Pl+Renton+WA+98058" target="_blank" rel="noopener noreferrer" class="contact-link">
           <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
           <div>
             <p class="clabel" data-i18n="contact.address">Direccion</p>
             <p class="cvalue">18534 139th Pl Renton WA 98058, Seattle, WA</p>
           </div>
-        </div>
+          <i class="fa-solid fa-arrow-right carrow"></i>
+        </a>
       </div>
 
       <div class="text-center">
@@ -253,6 +262,7 @@
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     const languageSelect = document.getElementById('languageSelect');
+    const languageSelectMobile = document.getElementById('languageSelectMobile');
     const toggleIcon = navToggle.querySelector('i');
 
     const translations = {
@@ -365,6 +375,7 @@
       });
 
       languageSelect.value = locale;
+      languageSelectMobile.value = locale;
       localStorage.setItem('siteLanguage', locale);
     }
 
@@ -373,6 +384,11 @@
 
     languageSelect.addEventListener('change', (event) => {
       applyLanguage(event.target.value);
+    });
+
+    languageSelectMobile.addEventListener('change', (event) => {
+      applyLanguage(event.target.value);
+      closeNav();
     });
 
     navToggle.addEventListener('click', () => {
