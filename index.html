@@ -60,17 +60,71 @@
     <div class="bubble w-8  h-8  left-[73%] [animation-duration:10s] [animation-delay:5s]"></div>
     <div class="bubble w-16 h-16 left-[87%] [animation-duration:16s] [animation-delay:2s]"></div>
 
-    <div class="hero-content">
-      <img src="images/logo.png" alt="Kathy's House Cleaning" class="hero-logo" />
-      <div class="hero-btns">
-        <a href="#contacto"  class="btn-explosion" data-i18n="hero.cta">Free Estimates</a>
+    <div class="hero-shell">
+      <div class="hero-content">
+        <img src="images/logo.png" alt="Kathy's House Cleaning" class="hero-logo" />
+        <p class="hero-sub" data-i18n="hero.sub">Limpieza Profesional · Confiable · Puntual</p>
+        <h1>
+          <span data-i18n="hero.title">Tu casa impecable</span>
+          <span class="accent" data-i18n="hero.highlight">sin que pierdas tu tiempo</span>
+        </h1>
+        <p class="desc" data-i18n="hero.desc">Tu hogar merece el mejor cuidado. Dejamos cada rincon impecable con dedicacion y productos de primera calidad.</p>
+        <div class="hero-btns">
+          <a href="#contacto" class="btn-explosion" data-i18n="hero.cta">Free Estimates</a>
+        </div>
+        <div class="hero-trust-pill">
+          <i class="fa-solid fa-shield-heart"></i>
+          <span data-i18n="hero.trust">Atencion detallada para casas, apartamentos y mudanzas</span>
+        </div>
+        <div class="hero-stats">
+          <div><span class="stat-num">+500</span><span class="stat-label" data-i18n="hero.stats.homes">Hogares</span></div>
+          <div class="stat-div"></div>
+          <div><span class="stat-num">12</span><span class="stat-label" data-i18n="hero.stats.years">Años</span></div>
+          <div class="stat-div"></div>
+          <div><span class="stat-num">100%</span><span class="stat-label" data-i18n="hero.stats.satisfaction">Satisfacción</span></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div><span class="stat-num">+500</span><span class="stat-label" data-i18n="hero.stats.homes">Hogares</span></div>
-        <div class="stat-div"></div>
-        <div><span class="stat-num">12</span><span class="stat-label" data-i18n="hero.stats.years">Años</span></div>
-        <div class="stat-div"></div>
-        <div><span class="stat-num">100%</span><span class="stat-label" data-i18n="hero.stats.satisfaction">Satisfacción</span></div>
+
+      <div class="hero-media">
+        <div class="hero-carousel" id="heroCarousel" aria-label="Galeria destacada de trabajos de limpieza">
+          <div class="hero-slide active">
+            <img src="images/WhatsApp Image 2026-03-11 at 12.54.07.jpeg" alt="Sala limpia y ordenada" />
+          </div>
+          <div class="hero-slide">
+            <img src="images/WhatsApp Image 2026-03-11 at 12.54.07 (3).jpeg" alt="Cocina impecable despues del servicio" />
+          </div>
+          <div class="hero-slide">
+            <img src="images/WhatsApp Image 2026-03-11 at 12.55.00 (2).jpeg" alt="Banera y bano limpios y brillantes" />
+          </div>
+          <div class="hero-slide">
+            <img src="images/WhatsApp Image 2026-03-11 at 12.57.36.jpeg" alt="Habitacion limpia con acabado profesional" />
+          </div>
+          <div class="hero-slide">
+            <img src="images/WhatsApp Image 2026-03-11 at 12.57.37.jpeg" alt="Resultados reales de limpieza profunda" />
+          </div>
+
+          <div class="hero-carousel-overlay">
+            <p class="hero-carousel-kicker" data-i18n="hero.carousel.kicker">Trabajos reales</p>
+            <p class="hero-carousel-copy" data-i18n="hero.carousel.copy">Resultados que hacen ver tu hogar mas fresco, cuidado y listo para recibir visitas.</p>
+          </div>
+
+          <div class="hero-carousel-controls" aria-label="Controles del carrusel">
+            <button type="button" class="hero-carousel-btn" id="heroPrev" aria-label="Imagen anterior">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button type="button" class="hero-carousel-btn" id="heroNext" aria-label="Imagen siguiente">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <div class="hero-carousel-dots" aria-label="Seleccionar imagen destacada">
+            <button type="button" class="hero-carousel-dot active" aria-label="Ver imagen 1"></button>
+            <button type="button" class="hero-carousel-dot" aria-label="Ver imagen 2"></button>
+            <button type="button" class="hero-carousel-dot" aria-label="Ver imagen 3"></button>
+            <button type="button" class="hero-carousel-dot" aria-label="Ver imagen 4"></button>
+            <button type="button" class="hero-carousel-dot" aria-label="Ver imagen 5"></button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -283,8 +337,13 @@
         'nav.contact': 'Contacto',
         'language.label': 'Idioma',
         'hero.sub': 'Limpieza Profesional · Confiable · Puntual',
+        'hero.title': 'Tu casa impecable',
+        'hero.highlight': 'sin que pierdas tu tiempo',
         'hero.desc': 'Tu hogar merece el mejor cuidado. Dejamos cada rincon impecable con dedicacion y productos de primera calidad.',
         'hero.cta': 'Estimado Gratis',
+        'hero.trust': 'Atencion detallada para casas, apartamentos y mudanzas',
+        'hero.carousel.kicker': 'Trabajos reales',
+        'hero.carousel.copy': 'Resultados que hacen ver tu hogar mas fresco, cuidado y listo para recibir visitas.',
         'hero.stats.homes': 'Hogares',
         'hero.stats.years': 'Anos',
         'hero.stats.satisfaction': 'Satisfaccion',
@@ -326,8 +385,13 @@
         'nav.contact': 'Contact',
         'language.label': 'Language',
         'hero.sub': 'Professional Cleaning · Reliable · On Time',
+        'hero.title': 'A spotless home',
+        'hero.highlight': 'without taking your time',
         'hero.desc': 'Your home deserves the best care. We leave every corner spotless using dedication and top-quality products.',
         'hero.cta': 'Free Estimate',
+        'hero.trust': 'Detailed care for houses, apartments, and move-in or move-out cleanings',
+        'hero.carousel.kicker': 'Real work',
+        'hero.carousel.copy': 'Results that make your home look fresher, cared for, and ready to welcome guests.',
         'hero.stats.homes': 'Homes',
         'hero.stats.years': 'Years',
         'hero.stats.satisfaction': 'Satisfaction',
@@ -429,6 +493,67 @@
       navLinks.classList.remove('active');
       toggleIcon.classList.remove('fa-xmark');
       toggleIcon.classList.add('fa-bars');
+    }
+
+    const heroCarousel = document.getElementById('heroCarousel');
+
+    if (heroCarousel) {
+      const heroSlides = Array.from(heroCarousel.querySelectorAll('.hero-slide'));
+      const heroDots = Array.from(heroCarousel.querySelectorAll('.hero-carousel-dot'));
+      const heroPrev = document.getElementById('heroPrev');
+      const heroNext = document.getElementById('heroNext');
+      let activeSlide = 0;
+      let autoplayId;
+
+      function renderHeroSlide(index) {
+        activeSlide = (index + heroSlides.length) % heroSlides.length;
+
+        heroSlides.forEach((slide, slideIndex) => {
+          slide.classList.toggle('active', slideIndex === activeSlide);
+        });
+
+        heroDots.forEach((dot, dotIndex) => {
+          dot.classList.toggle('active', dotIndex === activeSlide);
+        });
+      }
+
+      function startHeroAutoplay() {
+        stopHeroAutoplay();
+        autoplayId = window.setInterval(() => {
+          renderHeroSlide(activeSlide + 1);
+        }, 4500);
+      }
+
+      function stopHeroAutoplay() {
+        if (autoplayId) {
+          window.clearInterval(autoplayId);
+        }
+      }
+
+      heroPrev.addEventListener('click', () => {
+        renderHeroSlide(activeSlide - 1);
+        startHeroAutoplay();
+      });
+
+      heroNext.addEventListener('click', () => {
+        renderHeroSlide(activeSlide + 1);
+        startHeroAutoplay();
+      });
+
+      heroDots.forEach((dot, dotIndex) => {
+        dot.addEventListener('click', () => {
+          renderHeroSlide(dotIndex);
+          startHeroAutoplay();
+        });
+      });
+
+      heroCarousel.addEventListener('mouseenter', stopHeroAutoplay);
+      heroCarousel.addEventListener('mouseleave', startHeroAutoplay);
+      heroCarousel.addEventListener('focusin', stopHeroAutoplay);
+      heroCarousel.addEventListener('focusout', startHeroAutoplay);
+
+      renderHeroSlide(0);
+      startHeroAutoplay();
     }
   </script>
 
