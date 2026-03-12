@@ -671,6 +671,42 @@
     background: #fff;
     transform: scale(1.25);
   }
+
+  @media (min-width: 1024px) {
+    .hero-shell {
+      grid-template-columns: minmax(0, 0.92fr) minmax(380px, 0.95fr);
+      gap: 3rem;
+    }
+
+    .hero-content {
+      justify-self: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-logo {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-btns,
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .hero-carousel-overlay {
+      left: 50%;
+      right: auto;
+      width: min(82%, 31rem);
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .hero-carousel-copy {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   
   /* ── SERVICIOS ── */
   .services-section {
