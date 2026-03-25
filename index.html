@@ -35,16 +35,16 @@
         <label for="languageSelectMobile" class="block text-center">
           
           <select id="languageSelectMobile" aria-label="Seleccionar idioma" class="language-select-mobile ">
-            <option value="es">Español</option>
             <option value="en">English</option>
+            <option value="es">Español</option>
           </select>
         </label>
       </li>
     </ul>
     <label for="languageSelect" class="language-switcher hidden md:flex">
       <select id="languageSelect" aria-label="Seleccionar idioma" class="language-select">
-        <option value="es">ES</option>
         <option value="en">EN</option>
+        <option value="es">ES</option>
       </select>
     </label>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -423,7 +423,7 @@
     };
 
     function applyLanguage(lang) {
-      const locale = translations[lang] ? lang : 'es';
+      const locale = translations[lang] ? lang : 'en';
       document.documentElement.lang = locale;
 
       document.querySelectorAll('[data-i18n]').forEach((el) => {
@@ -447,7 +447,7 @@
       localStorage.setItem('siteLanguage', locale);
     }
 
-    const savedLanguage = localStorage.getItem('siteLanguage') || 'es';
+    const savedLanguage = localStorage.getItem('siteLanguage') || 'en';
     applyLanguage(savedLanguage);
 
     languageSelect.addEventListener('change', (event) => {
